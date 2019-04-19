@@ -13,7 +13,7 @@ public class Reservation {
     @Column(name = "start_time")
     private String startTime;
     @Column(name="num_guests")
-    private String numGuest;
+    private int numGuest;
 
     @JsonIgnoreProperties("reservations")
     @ManyToOne
@@ -28,7 +28,9 @@ public class Reservation {
     public Reservation(){}
 
     public Reservation(String startTime, int numGuest, Customer customer, Restaurant restaurant){
+
         this.startTime = startTime;
+        this.numGuest = numGuest;
         this.customer = customer;
         this.restaurant = restaurant;
     }
@@ -49,11 +51,11 @@ public class Reservation {
         this.startTime = startTime;
     }
 
-    public String getNumGuest() {
+    public int  getNumGuest() {
         return numGuest;
     }
 
-    public void setNumGuest(String numGuest) {
+    public void setNumGuest(int numGuest) {
         this.numGuest = numGuest;
     }
 

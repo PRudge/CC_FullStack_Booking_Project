@@ -42,6 +42,9 @@ public class DataLoader implements ApplicationRunner {
         Reservation reservation1 = new Reservation("12:50", 4, customer1, restaurant1);
         reservationRepository.save(reservation1);
 
+        Reservation reservation2 = new Reservation("14:50", 3, customer2, restaurant1);
+        reservationRepository.save(reservation2);
+
 
     }
 
