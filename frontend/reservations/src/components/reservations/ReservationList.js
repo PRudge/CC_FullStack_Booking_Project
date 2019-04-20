@@ -1,24 +1,26 @@
-import React, {Component} from 'react';
+import React from 'react';
+import Reservation from './Reservation';
 
-class ReservationList extends Component {
+const ReservationList = (props) => {
 
-  render() {
-     const reservationItems = this.props.reservations.map((reservation) => {
-       return (
-         console.log(reservation)
-         // <Reservation date={reservation.date} startTime={reservation.startTime} key={reservation.id}/>
-       );
-     });
+    const reservations = props.reservations.map((reservation) => {
+      return (
+        <li key={reservation.id} className="reservation-item">
+          <div className="reservation">
+            <Reservation date={reservation.date} startTime={reservation.startTime} numGuests={reservation.numGuests} customer={reservation.customer} />
+          </div>
+        </li>
+      );
+    });
 
-     return (
-       <div className='reservations-list'>
-         <ul>
-           <p>test list</p>
-           {/* {reservationItems} */}
-         </ul>
-       </div>
-     );
-   }
+    return (
+      <div className='reservations-list'>
+        <ul>
+          <h3>Reservation List container</h3>
+          {reservations}
+        </ul>
+      </div>
+    );
 }
 
 export default ReservationList;
