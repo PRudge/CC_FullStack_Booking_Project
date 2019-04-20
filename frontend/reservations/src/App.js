@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import NavBar from './NavBar';
 import ReservationListContainer from './containers/reservations/ReservationListContainer';
 
 class App extends Component {
   render() {
     return (
-      <div>
-      <h1>hi</h1>
-      <ReservationListContainer />
-    </div>
+      <Router >
+        <React.Fragment>
+          <NavBar />
+          <ReservationListContainer />
+        </React.Fragment>
+      </Router>
     );
   }
 }
