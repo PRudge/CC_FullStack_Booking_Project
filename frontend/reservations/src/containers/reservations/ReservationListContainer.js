@@ -9,7 +9,7 @@ class ReservationListContainer extends Component {
       restaurant:
       {
         capacity: 65,
-        max_time: 2,
+        maxTime: 2,
         openHour: "19:00",
         reservations: [
           {
@@ -54,12 +54,12 @@ class ReservationListContainer extends Component {
       console.log(this.state);
     return (
       <div>
+        <h2>List Container test</h2>
         <p>Total capacity: {this.state.restaurant.capacity}</p>
-        <p>Maximum time for reservations: {this.state.restaurant.max_time}</p>
+        <p>Maximum time for reservations: {this.state.restaurant.maxTime} hours</p>
         <p>Opening time: {this.state.restaurant.openHour}</p>
 
-        {/* <ReservationList reservations={this.state.restaurant.reservations} /> */}
-    <h2>list container test</h2>
+        <ReservationList reservations={this.state.restaurant.reservations} />
   </div>
     )
   }
