@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import ReservationList from '../../components/reservations/ReservationList';
-// import Reservation from '../../components/reservations/Reservation';
 
 class ReservationListContainer extends Component {
   constructor(props){
@@ -64,9 +63,4 @@ class ReservationListContainer extends Component {
     )
   }
 }
-
-
-
-
-
     export default ReservationListContainer;
