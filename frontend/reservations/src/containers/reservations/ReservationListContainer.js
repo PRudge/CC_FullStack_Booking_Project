@@ -54,7 +54,7 @@ class ReservationListContainer extends Component {
       console.log(this.state);
     return (
       <div>
-        <h2>List Container test</h2>
+        <h2>Reservation List Container</h2>
         <p>Total capacity: {this.state.restaurant.capacity}</p>
         <p>Maximum time for reservations: {this.state.restaurant.maxTime} hours</p>
         <p>Opening time: {this.state.restaurant.openHour}</p>
