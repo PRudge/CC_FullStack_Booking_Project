@@ -7,7 +7,7 @@ const ReservationList = (props) => {
       return (
         <li key={reservation.id} className="reservation-item">
           <div className="reservation">
-            <Reservation date={reservation.date} startTime={reservation.startTime} numGuests={reservation.numGuests} customer={reservation.customer} />
+            <Reservation date={reservation.date} startTime={reservation.startTime} />
           </div>
         </li>
       );
