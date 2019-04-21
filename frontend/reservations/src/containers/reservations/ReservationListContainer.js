@@ -10,6 +10,7 @@ class ReservationListContainer extends Component {
       return (
         <div>
           <h2>Reservation List Container</h2>
+          {/* <p>{props.reservations}</p> */}
           {/* <ReservationList reservations = {this.state.reservations} /> */}
         </div>
     )

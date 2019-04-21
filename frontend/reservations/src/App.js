@@ -21,13 +21,14 @@ class App extends Component {
 
 
  render() {
-   console.log(this.state.reservations);
+   console.log('app.js: ', this.state.reservations);
    return (
      <Router >
        <React.Fragment>
        <NavBar />
 
-           {/* <Route exact path = '/reservations' component={ReservationListContainer}/> */}
+           <Route exact path = '/' component={ReservationListContainer}/>
+           <Route path = '/reservations' component={ReservationListContainer} reservations = {this.state.reservations} />
            {/* <Route exact path = '/reservations/new' component= {ReservationFormContainer} /> */}
 
        </React.Fragment>
