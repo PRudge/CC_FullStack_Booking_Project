@@ -5,11 +5,6 @@ class ReservationListContainer extends Component {
   constructor(props){
     super(props);
     this.state = {
-      restaurant:
-      {
-        capacity: 65,
-        maxTime: 2,
-        openHour: "19:00",
         reservations: [
           {
             id: 1,
@@ -45,7 +40,6 @@ class ReservationListContainer extends Component {
             }
           }
         ]
-      }
     }
   }
 
@@ -54,11 +48,13 @@ class ReservationListContainer extends Component {
     return (
       <div>
         <h2>Reservation List Container</h2>
-        <p>Total capacity: {this.state.restaurant.capacity}</p>
-        <p>Maximum time for reservations: {this.state.restaurant.maxTime} hours</p>
-        <p>Opening time: {this.state.restaurant.openHour}</p>
+        <p>test reservation: {this.state.reservations}</p>
 
-        <ReservationList reservations={this.state.restaurant.reservations} />
+        {/* <p>Total capacity: {this.state.restaurant.capacity}</p>
+        <p>Maximum time for reservations: {this.state.restaurant.maxTime} hours</p>
+        <p>Opening time: {this.state.restaurant.openHour}</p> */}
+
+        <ReservationList reservations={this.state.reservations} />
   </div>
     )
   }
