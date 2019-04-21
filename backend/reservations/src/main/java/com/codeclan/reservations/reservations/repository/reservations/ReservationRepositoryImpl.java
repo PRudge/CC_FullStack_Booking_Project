@@ -1,7 +1,5 @@
 package com.codeclan.reservations.reservations.repository.reservations;
 
-
-
         import com.codeclan.reservations.reservations.models.Reservation;
         import org.hibernate.Criteria;
         import org.hibernate.HibernateException;
@@ -18,25 +16,21 @@ public class ReservationRepositoryImpl implements ReservationRepositoryCustom {
     @Autowired
     EntityManager entityManager;
 
-
-
     @Transactional
     public List<Reservation> findAllReservations(){
-        List<Reservation> reservations = null;
+        List<Reservation> results = null;
         Session session = entityManager.unwrap(Session.class);
 
         try {
             Criteria cr = session.createCriteria(Reservation.class);
-            reservations = cr.list();
+            results = cr.list();
         } catch (HibernateException e) {
             e.printStackTrace();
         } finally {
             session.close();
         }
-        return reservations;
+        return results;
     }
-
-
 
     @Transactional
     public List<Reservation> findReservationsForAGivenCustomer(Long customerId){
