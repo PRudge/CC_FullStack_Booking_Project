@@ -25,22 +25,19 @@ public class ReservationController {
     @Autowired
     CustomerRepository customerRepository;
 
-
-
-//    List<Reservation> findReservationsForAGivenCustomer(Long customerId);
-//    List <Reservation> findReservationsForAGivenDateForAGivenTime(String date, String startTime);
-
-
-
-    @GetMapping("/{date}")
+   @GetMapping("/{date}")
     public List<Reservation> getFindReservationsByDate(@PathVariable String date){
         return reservationRepository.findReservationsByDate(date);
     }
 
-
     @GetMapping("/customer/{customerId}")
     public List<Reservation> getFindReservationsForAGivenCustomer(@PathVariable Long customerId){
         return reservationRepository.findReservationsForAGivenCustomer(customerId);
+    }
+
+    @GetMapping("/date/{date}/time/{startTime}")
+    public List<Reservation>  getFindReservationsForAGivenDateForAGivenTime(@PathVariable String date, @PathVariable String startTime){
+         return reservationRepository.findReservationsForAGivenDateForAGivenTime(date, startTime);
     }
 }
 
