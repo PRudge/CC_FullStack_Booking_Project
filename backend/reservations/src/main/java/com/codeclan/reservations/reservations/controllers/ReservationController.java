@@ -1,6 +1,7 @@
 package com.codeclan.reservations.reservations.controllers;
 
 import com.codeclan.reservations.reservations.models.Reservation;
+import com.codeclan.reservations.reservations.repository.customers.CustomerRepository;
 import com.codeclan.reservations.reservations.repository.reservations.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,8 +22,11 @@ public class ReservationController {
     @Autowired
     ReservationRepository reservationRepository;
 
+    @Autowired
+    CustomerRepository customerRepository;
 
-//    List<Reservation> findReservationsByDate(String date);
+
+
 //    List<Reservation> findReservationsForAGivenCustomer(Long customerId);
 //    List <Reservation> findReservationsForAGivenDateForAGivenTime(String date, String startTime);
 
@@ -33,5 +37,10 @@ public class ReservationController {
         return reservationRepository.findReservationsByDate(date);
     }
 
+
+    @GetMapping("/customer/{customerId}")
+    public List<Reservation> getFindReservationsForAGivenCustomer(@PathVariable Long customerId){
+        return reservationRepository.findReservationsForAGivenCustomer(customerId);
+    }
 }
 
