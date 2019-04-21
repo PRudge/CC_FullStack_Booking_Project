@@ -29,8 +29,9 @@ public class Reservation {
 
     public Reservation(){}
 
-    public Reservation(String startTime, int numGuest, Customer customer, Restaurant restaurant){
+    public Reservation(String date, String startTime, int numGuest, Customer customer, Restaurant restaurant){
 
+        this.date = date;
         this.startTime = startTime;
         this.numGuest = numGuest;
         this.customer = customer;

@@ -30,20 +30,29 @@ public class DataLoader implements ApplicationRunner {
     }
 
     public void run(ApplicationArguments args){
-        Customer customer1 = new Customer("Abi", 345353455);
+        Customer customer1 = new Customer("John", "Smith", 345353455);
         customerRepository.save(customer1);
 
-        Customer customer2 = new Customer("Nuno", 123123123);
+        Customer customer2 = new Customer("John", "Doe", 123123123);
         customerRepository.save(customer2);
 
-        Restaurant restaurant1 = new Restaurant(10, "12:00-22:00");
+        Customer customer3 = new Customer("Jane", "Cameron", 1231523543);
+        customerRepository.save(customer3);
+
+        Restaurant restaurant1 = new Restaurant("CodeClan Bistro", 10, "12:00-22:00");
         restaurantRepository.save(restaurant1);
 
-        Reservation reservation1 = new Reservation("12:50", 4, customer1, restaurant1);
+        Reservation reservation1 = new Reservation("23-4-2019", "12:30", 4, customer1, restaurant1);
         reservationRepository.save(reservation1);
 
-        Reservation reservation2 = new Reservation("14:50", 3, customer2, restaurant1);
+        Reservation reservation2 = new Reservation("23-4-2019","14:30", 3, customer2, restaurant1);
         reservationRepository.save(reservation2);
+
+        Reservation reservation3 = new Reservation("23-4-2019","14:30", 7, customer3, restaurant1);
+        reservationRepository.save(reservation3);
+
+        Reservation reservation4 = new Reservation("27-4-2019","14:30", 7, customer3, restaurant1);
+        reservationRepository.save(reservation4);
 
 
     }

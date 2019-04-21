@@ -15,6 +15,9 @@ public class Restaurant {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         public Long id;
 
+        @Column(name="name")
+        private String name;
+
         @Column(name = "capacity")
         private int capacity;
 
@@ -27,7 +30,8 @@ public class Restaurant {
 
         public Restaurant(){}
 
-        public Restaurant(int capacity, String opening_hours){
+        public Restaurant(String name, int capacity, String opening_hours){
+            this.name = name;
             this.capacity = capacity;
             this.opening_hours = opening_hours;
             this.reservations = new ArrayList<>();
@@ -39,6 +43,14 @@ public class Restaurant {
 
         public void setId(Long id) {
                 this.id = id;
+        }
+
+        public String getName() {
+                return name;
+        }
+
+        public void setName(String name) {
+                this.name = name;
         }
 
         public int getCapacity() {
