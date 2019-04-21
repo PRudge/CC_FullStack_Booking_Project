@@ -12,14 +12,14 @@ class ReservationFormContainer extends Component {
 
   componentDidMount(){
     const request = new Request();
-    request.get("/api/reservations").then((data) => {
+    request.get("/reservations").then((data) => {
       this.setState({reservations: data.reservations})
     });
   }
 
   handleReservationPost(reservation){
     const request = new Request();
-      request.post('/api/reservations', reservation).then(() => {
+      request.post('/reservations', reservation).then(() => {
       window.location = '/reservations'
     })
   }

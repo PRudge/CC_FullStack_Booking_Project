@@ -4,6 +4,7 @@ import ReservationList from '../../components/reservations/ReservationList';
 class ReservationListContainer extends Component {
   constructor(props){
     super(props);
+    this.state = {reservations: []}
   }
 
   render() {

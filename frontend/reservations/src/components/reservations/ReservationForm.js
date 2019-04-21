@@ -1,4 +1,5 @@
 import React from 'react';
+import Request from '../../helpers/Request';
 
 const ReservationForm = (props) => {
 
@@ -9,13 +10,20 @@ const ReservationForm = (props) => {
         "startTime": event.target.startTime.value,
         "date": event.target.date.value,
         "numGuests": event.target.numGuests.value,
-        "firstName": event.target.customer.firstName.value,
-        "lastName": event.target.customer.lastName.value,
-        "phoneNumber": event.target.customer.phoneNumber.value,
+        "firstName": event.target.firstName.value,
+        "lastName": event.target.lastName.value,
+        "phoneNumber": event.target.phoneNumber.value,
       }
     props.handleReservationPost(reservation)
-
   }
+
+  function handleReservationPost(reservation) {
+    const request = new Request();
+    request.post('/reservations', reservation).then(() => {
+      window.location = '/reservations'
+    })
+  }
+
       return (
         <div>
           <form onSubmit={handleSubmit}>
