@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Request from './helpers/Request.js';
 import NavBar from './NavBar';
 import ReservationList from './components/reservations/ReservationList';
 import ReservationFormContainer from './containers/reservations/ReservationFormContainer';
-import Request from './helpers/Request.js';
+
 
 
 class App extends Component {
