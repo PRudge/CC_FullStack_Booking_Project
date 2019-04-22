@@ -5,5 +5,5 @@ import com.codeclan.reservations.reservations.models.Restaurant;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RestaurantRepository extends JpaRepository<Restaurant, Long>, RestaurantRepositoryCustom {
+public interface RestaurantRepository extends JpaRepository<Restaurant, Long> {
 }

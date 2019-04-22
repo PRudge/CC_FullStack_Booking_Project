@@ -9,5 +9,6 @@ public interface ReservationProjection {
     long getId();
     String getDate();
     String getStartTime();
+    int getNumGuest();
     Customer getCustomer();
 }
