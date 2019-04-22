@@ -29,7 +29,7 @@ class App extends Component {
 
            <Route exact path = '/' component={ReservationListContainer}/>
            <Route path = '/reservations' component={ReservationListContainer} reservations = {this.state.reservations} />
-           {/* <Route exact path = '/reservations/new' component= {ReservationFormContainer} /> */}
+           <Route exact path = '/reservations/new' component= {ReservationFormContainer} />
 
        </React.Fragment>
      </Router>
