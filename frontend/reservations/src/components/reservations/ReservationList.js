@@ -6,7 +6,7 @@ const ReservationList = ({reservations}) => {
       return (
         <li key={reservation.id} className="reservation-item">
           <div className="reservation">
-            <Reservation date={reservation.date} startTime={reservation.startTime} numGuest={reservation.numGuest}/>
+            <Reservation firstName={reservation.customer.firstName} lastName={reservation.customer.lastName} date={reservation.date} startTime={reservation.startTime} numGuest={reservation.numGuest} phoneNum={reservation.customer.phoneNum}/>
           </div>
         </li>
       );
