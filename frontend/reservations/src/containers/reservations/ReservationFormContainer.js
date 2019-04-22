@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './ReservationForm.css';
 
 import Request from '../../helpers/Request';
 import ReservationForm from '../../components/reservations/ReservationForm';
