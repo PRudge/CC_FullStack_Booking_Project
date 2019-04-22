@@ -50,7 +50,6 @@ public class ReservationRepositoryImpl implements ReservationRepositoryCustom {
         return results;
     }
 
-
     @Transactional
     public List<Reservation> findReservationsForAGivenDateForAGivenTime(String date, String startTime){
         List<Reservation> results =null;
@@ -70,5 +69,21 @@ public class ReservationRepositoryImpl implements ReservationRepositoryCustom {
         return results;
     }
 
+    @Transactional
+    public List<Reservation> findReservationById(Long Id){
+        List<Reservation> results = null;
+
+        Session session = entityManager.unwrap(Session.class);
+        try {
+            Criteria cr = session.createCriteria(Reservation.class);
+            cr.add(Restrictions.eq("Id", Id));
+            results = cr.list();
+        } catch(HibernateException ex){
+            ex.printStackTrace();
+        } finally {
+            session.close();
+        }
+        return results;
+    }
 
 }
