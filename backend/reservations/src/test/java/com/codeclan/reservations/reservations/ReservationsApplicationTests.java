@@ -4,7 +4,6 @@ import com.codeclan.reservations.reservations.models.Customer;
 import com.codeclan.reservations.reservations.models.Reservation;
 import com.codeclan.reservations.reservations.repository.customers.CustomerRepository;
 import com.codeclan.reservations.reservations.repository.reservations.ReservationRepository;
-import com.codeclan.reservations.reservations.repository.restaurants.RestaurantRepository;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,9 +19,6 @@ import static junit.framework.TestCase.assertEquals;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ReservationsApplicationTests {
-
-	@Autowired
-	RestaurantRepository restaurantRepository;
 
 	@Autowired
 	ReservationRepository reservationRepository;
