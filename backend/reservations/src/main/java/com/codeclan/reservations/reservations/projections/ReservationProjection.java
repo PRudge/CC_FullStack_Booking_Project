@@ -1,5 +1,6 @@
 package com.codeclan.reservations.reservations.projections;
 
+<<<<<<< HEAD
 import com.codeclan.reservations.reservations.models.Customer;
 import com.codeclan.reservations.reservations.models.Reservation;
 import com.codeclan.reservations.reservations.models.Restaurant;
@@ -12,4 +13,7 @@ public interface ReservationProjection {
     String getStartTime();
     Restaurant getRestauran();
     Customer getCustomer();
+=======
+public interface ReservationProjection {
+>>>>>>> develop
 }

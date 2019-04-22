@@ -26,6 +26,7 @@ public class ReservationController {
     @Autowired
     CustomerRepository customerRepository;
 
+
    @GetMapping("/{date}")
     public List<Reservation> getFindReservationsByDate(@PathVariable String date){
         return reservationRepository.findReservationsByDate(date);
@@ -38,7 +39,7 @@ public class ReservationController {
 
     @GetMapping("/date/{date}/time/{startTime}")
     public List<Reservation>  getFindReservationsForAGivenDateForAGivenTime(@PathVariable String date, @PathVariable String startTime){
-         return reservationRepository.findReservationsForAGivenDateForAGivenTime(date, startTime);
+        return reservationRepository.findReservationsForAGivenDateForAGivenTime(date, startTime);
     }
 
     //

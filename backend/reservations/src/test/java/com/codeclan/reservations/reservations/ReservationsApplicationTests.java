@@ -36,11 +36,13 @@ public class ReservationsApplicationTests {
 
 
 
-	@Test
-	public void canFindAllReservations(){
-		List<Reservation> found = reservationRepository.findAllReservations();
-		assertEquals(4, found.size() );
-	}
+//	@Test
+//	public void canFindAllReservations(){
+//		List<Reservation> found = reservationRepository.findAllReservations();
+//		assertEquals(4, found.size() );
+//
+//		assertEquals(1L, found.get(0).getId(), 0);
+//	}
 
 	@Test
 	public void canGetBookingsForGivenDate(){
