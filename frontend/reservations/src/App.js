@@ -30,7 +30,10 @@ class App extends Component {
             path = '/reservations'
             render={() => <ReservationList reservations={this.state.reservations}/>}
            />
-           <Route exact path = '/reservations/new' component={ReservationFormContainer} />
+           <Route
+           path = '/reservations/new'
+           render={ () => <ReservationFormContainer reservations={this.state.reservations} /> }
+           />
 
        </React.Fragment>
      </Router>

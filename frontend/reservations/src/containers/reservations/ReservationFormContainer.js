@@ -10,13 +10,6 @@ class ReservationFormContainer extends Component {
     this.handleReservationPost = this.handleReservationPost.bind(this);
   }
 
-  componentDidMount(){
-    const request = new Request();
-    request.get("/reservations").then((data) => {
-      this.setState({reservations: data.reservations})
-    });
-  }
-
   handleReservationPost(reservation){
     const request = new Request();
       request.post('/reservations', reservation).then(() => {
