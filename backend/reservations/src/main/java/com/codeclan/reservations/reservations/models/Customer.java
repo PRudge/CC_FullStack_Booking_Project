@@ -12,11 +12,7 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-<<<<<<< HEAD
-    public Long Id;
-=======
     private Long Id;
->>>>>>> develop
 
     @Column(name = "first_name")
     private String firstName;

@@ -7,13 +7,11 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
 
-
-
+@RepositoryRestResource(excerptProjection = ReservationProjection.class)
 public interface ReservationRepository extends JpaRepository<Reservation, Long>, ReservationRepositoryCustom {
 
-    List <Reservation> findAllReservations();
-
+    List<Reservation> findAllReservations();
     List<Reservation> findReservationsByDate(String date);
     List<Reservation> findReservationsForAGivenCustomer(Long customerId);
-    List <Reservation> findReservationsForAGivenDateForAGivenTime(String date, String startTime);
+    List<Reservation> findReservationsForAGivenDateForAGivenTime(String date, String startTime);
 }
