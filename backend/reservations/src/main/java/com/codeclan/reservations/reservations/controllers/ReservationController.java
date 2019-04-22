@@ -17,8 +17,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/reservations")
+@RequestMapping("/api")
 public class ReservationController {
+
     @Autowired
     ReservationRepository reservationRepository;
 
@@ -39,5 +40,11 @@ public class ReservationController {
     public List<Reservation>  getFindReservationsForAGivenDateForAGivenTime(@PathVariable String date, @PathVariable String startTime){
          return reservationRepository.findReservationsForAGivenDateForAGivenTime(date, startTime);
     }
-}
 
+    //
+
+    @GetMapping(value = "/reservations")
+    List<Reservation> getFindReservations(){
+        return reservationRepository.findAllReservations();
+    }
+}
