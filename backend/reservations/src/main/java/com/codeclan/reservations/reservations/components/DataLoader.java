@@ -1,6 +1,5 @@
 package com.codeclan.reservations.reservations.components;
 
-
 import com.codeclan.reservations.reservations.models.Customer;
 import com.codeclan.reservations.reservations.models.Reservation;
 import com.codeclan.reservations.reservations.models.Restaurant;
@@ -11,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
-
 
 @Component
 public class DataLoader implements ApplicationRunner {
@@ -53,7 +51,6 @@ public class DataLoader implements ApplicationRunner {
 
         Reservation reservation4 = new Reservation("27-4-2019","14:30", 7, customer3, restaurant1);
         reservationRepository.save(reservation4);
-
 
     }
 
