@@ -12,7 +12,7 @@ class ReservationListContainer extends Component {
         <div>
           <h2>Reservation List Container</h2>
           {/* <p>{props.reservations}</p> */}
-          {/* <ReservationList reservations = {this.state.reservations} /> */}
+           <ReservationList reservations = {this.state.reservations} />
         </div>
     )
   }
