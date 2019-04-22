@@ -9,12 +9,12 @@ const ReservationForm = (props) => {
     const customer = {
       "firstName": event.target.firstName.value,
       "lastName": event.target.lastName.value,
-      "phoneNumber": event.target.phoneNumber.value,
+      "phoneNum": event.target.phoneNum.value,
     }
     const reservation = {
         "startTime": event.target.startTime.value,
         "date": event.target.date.value,
-        "numGuests": event.target.numGuest.value,
+        "numGuest": event.target.numGuest.value,
         "restaurant": "http://localhost:8080/restaurant/1",
         "customer": null
     }
@@ -35,7 +35,7 @@ const ReservationForm = (props) => {
             <input type="text" placeholder="First Name" name="firstName"/>
             <input type="text" placeholder="Last Name" name="lastName"/>
             <input type="text" placeholder="date" name="date"/>
-            <input type="number" placeholder="phoneNumber" name="phoneNumber"/>
+            <input type="number" placeholder="phoneNum" name="phoneNum"/>
             <input type="number" placeholder="numGuest" name="numGuest"/>
             <button type="submit">Save</button>
           </form>
