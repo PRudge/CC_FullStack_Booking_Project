@@ -16,12 +16,16 @@ const ReservationForm = (props) => {
         "date": event.target.date.value,
         "numGuests": event.target.numGuest.value,
         "restaurant": "http://localhost:8080/restaurant/1",
-        "customer": customer.id
+        "customer": null
     }
-    
-      props.handleCustomerPost(customer);
-
-      props.handleReservationPost(reservation)
+    const req = new Request()
+    req.post('/customers', customer)
+      .then(data => data.json())
+      .then((newCustomer) => {
+        reservation.customer = "http://localhost:8080/customers/" + newCustomer.id
+        return reservation;
+      })
+      .then(reservation => props.handleReservationPost(reservation));
   }
 
       return (
