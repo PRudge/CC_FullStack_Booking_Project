@@ -6,22 +6,22 @@ const ReservationForm = (props) => {
 
   function handleSubmit(event){
     event.preventDefault();
+    const customer = {
+      "firstName": event.target.firstName.value,
+      "lastName": event.target.lastName.value,
+      "phoneNumber": event.target.phoneNumber.value,
+    }
     const reservation = {
         "startTime": event.target.startTime.value,
         "date": event.target.date.value,
-        "numGuests": event.target.numGuests.value,
-        "firstName": event.target.firstName.value,
-        "lastName": event.target.lastName.value,
-        "phoneNumber": event.target.phoneNumber.value,
-      }
-    props.handleReservationPost(reservation)
-  }
+        "numGuests": event.target.numGuest.value,
+        "restaurant": "http://localhost:8080/restaurant/1",
+        "customer": customer.id
+    }
+    
+      props.handleCustomerPost(customer);
 
-  function handleReservationPost(reservation) {
-    const request = new Request();
-    request.post('/reservations', reservation).then(() => {
-      window.location = '/reservations'
-    })
+      props.handleReservationPost(reservation)
   }
 
       return (
@@ -32,7 +32,7 @@ const ReservationForm = (props) => {
             <input type="text" placeholder="Last Name" name="lastName"/>
             <input type="text" placeholder="date" name="date"/>
             <input type="number" placeholder="phoneNumber" name="phoneNumber"/>
-            <input type="number" placeholder="numGuests" name="numGuests"/>
+            <input type="number" placeholder="numGuest" name="numGuest"/>
             <button type="submit">Save</button>
           </form>
         </div>
