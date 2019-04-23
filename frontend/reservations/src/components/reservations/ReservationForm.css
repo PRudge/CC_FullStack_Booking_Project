@@ -1,50 +1,10 @@
-.table {
-  display: block;
-  max-height: 50vh;
-  overflow: scroll;
-}
-.table td, th {
- border: 1px solid #ddd;
- padding: 8px;
- text-align: center;
- font-family: 'Oswald', sans-serif;
- width: 10vw;
-}
-
-.table tr:nth-child(even){
-  background-color: #aee1f5;
-}
-
-.table tr:nth-child(odd){
-  background-color:	#bae4f4;
-}
-
-.table  tr:hover{
-  background-color: #85d5f5;
-}
-
-.table th {
-position: -webkit-sticky;
-position: -moz-sticky;
-position: -ms-sticky;
-position: -o-sticky;
-position: sticky;
-top: 0;
-
-padding-top: 12px;
-padding-bottom: 12px;
-text-align: left;
-background-color: #2b7fa8;
-color: white;
-}
-
 /**********/
 /** Form **/
 /**********/
 
 .reservation-form{
   margin: 20px;
-  max-width: 500px;
+  max-width: 28.125em;
   line-height: 1.5;
 }
 
@@ -57,18 +17,12 @@ label{
   text-shadow: 1px 1px 1px #fff;
 }
 
-.reservation-form label > span{
-	float: left;
-	width: 180px;
-	font-size: 1em;
-}
-
-/* .time-slot-select, .start-time, .first-name, .last-name, .date, .phone-num, .num-guest{
+.start-time, .first-name, .last-name, .date, .phone-num, .num-guest{
   display:block;
   float: right;
-  width: 80px;
+  width: 100px;
   font-size: 1em;
-} */
+}
 
 fieldset{
   border-radius: 10px;
@@ -89,19 +43,10 @@ legend{
   font-size: 1em;
 }
 
-.reservation-form textarea{
-	width:250px;
-	height:100px;
-}
-.reservation-form input[type=text],
-.reservation-form input[type=date],
-.reservation-form input[type=number],
-.reservation-form input[type=search],
-.reservation-form select,
-.reservation-form textarea{
+.reservation-form input[type=text],input[type=number]{
   border-radius: 3px;
   border: 0px;
-  border: 1px solid #45a2e8;
+  /* border: 1px solid #45a2e8; */
   font-weight: 300;
   outline: none;
   color: #002b6e;
@@ -111,7 +56,6 @@ legend{
   background: #ffffff;
   width:50%;
 }
-
 
 .reservation-form input[type=submit], input[type=reset]
 {
@@ -136,32 +80,4 @@ legend{
   border-radius: 3px;
   border-radius: 3px;
   font-weight: bold;
-}
-
-/***********/
-/* Nav Bar */
-/***********/
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #127abe;
-}
-
-nav li {
-  float: left;
-}
-
-nav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-nav li a:hover:not(.active) {
-  background-color: #0b5383;
 }

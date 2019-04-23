@@ -1,11 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import ReservationTable from './css/ReservationsTable.css';
+
+
 const NavBar = (props) => {
   return (
     <header>
-      <img src="/images/calendar.png" alt="Logo"/>
-
+      <img src="/images/calendar.jpg" alt="Logo"/>
+      <nav>
       <ul>
         <li className="navLink">
           <Link to="/reservations">Reservations</Link>
@@ -15,6 +18,7 @@ const NavBar = (props) => {
         </li>
 
       </ul>
+      </nav>
     </header>
   )
 }
