@@ -13,7 +13,7 @@ class ReservationFormContainer extends Component {
   handleReservationPost(reservation){
     const request = new Request();
       request.post('/reservations', reservation).then(() => {
-      window.location = '/reservations'
+      // window.location = '/reservations'
     })
   }
 
