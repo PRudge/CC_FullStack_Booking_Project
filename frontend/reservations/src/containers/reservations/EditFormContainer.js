@@ -18,9 +18,7 @@ class EditFormContainer extends Component {
       .then((reservation) => {
         this.setState({reservation: reservation})
       });
-    // request.get("/customers").then((customer) => {
-    //   this.setState({customer: customer._embedded.customers})
-    // });
+
     request.get("/reservations/" + this.props.id + "/customer").then((customer) => {
       this.setState({customer: customer})
     })
@@ -32,6 +30,16 @@ class EditFormContainer extends Component {
       window.location = '/reservations'
     })
   }
+
+  handleReservationDelete(id){
+    const request = new Request();
+    const url = '/api/pirates/' + id;
+    request.delete(url).then(() => {
+      window.location = '/pirates'
+    })
+  }
+
+
   render(){
     if(!this.state.reservation || !this.state.customer){
       return <h1>loading</h1>;
