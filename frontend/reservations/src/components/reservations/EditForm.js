@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Request from '../../helpers/Request';
 
 class EditForm extends Component {
   constructor(props) {
@@ -9,9 +10,7 @@ class EditForm extends Component {
       numGuest: props.reservation.numGuest,
       firstName: props.customer.firstName,
       lastName: props.customer.lastName,
-      phoneNum: props.customer.phoneNum
-      // customer: props.reservation._links.self.href.replace("{?projection=embedCustomer}", "")
-      // customer: props.customer
+      phoneNum: props.customer.phoneNum,
     }
     console.log("EditForm after constructor: ", this.state);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,10 +26,20 @@ class EditForm extends Component {
     const reservation = {
       "startTime": this.state.startTime,
       "date": this.state.date,
-      "numGuest": this.state.numGuest,
-      "firstName": this.state.firstName
+      "numGuest": this.state.numGuest
     }
-    this.props.handleReservationEdit(reservation);
+
+    const customer = {
+      "firstName": this.state.firstName,
+      "lastName": this.state.lastName,
+      "phoneNum": this.state.phoneNum
+    }
+
+    const request = new Request()
+    request.patch('/customers/' + this.props.customer.id, customer)
+    .then(() => {
+      this.props.handleReservationEdit(reservation);
+    })
   }
 
   render(){
@@ -44,10 +53,6 @@ class EditForm extends Component {
           <input type = "text" value = {this.state.lastName} name="lastName" onChange={e => this.setState({ lastName: e.target.value })} />
           <input type = "text" value = {this.state.phoneNum} name="phoneNum" onChange={e => this.setState({ phoneNum: e.target.value })} />
 
-
-          {/* <select name="customer" onChange={e => this.setState({ customer: e.target.value })}>
-              {customerOptions}
-          </select> */}
           <button type="submit">Save</button>
         </form>
       </div>
