@@ -31,11 +31,19 @@ const ReservationForm = (props) => {
       return (
         <div>
           <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="startTime" name="startTime"/>
+            <label for="time-slot-select">Choose Time:</label>
+            <select name="startTime">
+              <option>12:00</option>
+              <option>14:00</option>
+              <option>16:00</option>
+              <option>18:00</option>
+              <option>20:00</option>
+            </select>
             <input type="text" placeholder="First Name" name="firstName"/>
             <input type="text" placeholder="Last Name" name="lastName"/>
             <input type="text" placeholder="date" name="date"/>
-            <input type="text" placeholder="phoneNum" name="phoneNum"/>
+            <input type="text" placeholder="phoneNum" name="phoneNum" required
+       minlength="10" maxlength="11"/>
             <input type="number" placeholder="numGuest" name="numGuest"/>
             <button type="submit">Save</button>
           </form>
