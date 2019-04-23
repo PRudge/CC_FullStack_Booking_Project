@@ -4,7 +4,7 @@ import ReservationTable from '../../css/ReservationsTable.css';
 const Reservation = (props) => {
 
   if(!props.date && !props.startTime && !props.numGuest) { return null; }
-
+  
   return (
         <tr>
             <td>{props.firstName} {props.lastName}</td>
@@ -13,9 +13,9 @@ const Reservation = (props) => {
             <td>{props.numGuest}</td>
             <td>{props.phoneNum}</td>
             <td>
-              <form method="GET">
-                <input type="submit" value="edit" />
-              </form>
+              <button>
+                <a href={"/reservations/edit/" + props.id}>edit</a>
+              </button>
               <form method="POST">
                 <input type="submit" value="delete" />
               </form>

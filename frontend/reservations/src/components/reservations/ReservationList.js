@@ -5,7 +5,7 @@ const ReservationList = ({reservations}) => {
     const allReservations = reservations.map((reservation) => {
       return (
         <tbody key={reservation.id} className="reservation">
-            <Reservation firstName={reservation.customer.firstName} lastName={reservation.customer.lastName} date={reservation.date} startTime={reservation.startTime} numGuest={reservation.numGuest} phoneNum={reservation.customer.phoneNum}/>
+            <Reservation id={reservation.id} firstName={reservation.customer.firstName} lastName={reservation.customer.lastName} date={reservation.date} startTime={reservation.startTime} numGuest={reservation.numGuest} phoneNum={reservation.customer.phoneNum}/>
         </tbody>
       );
     });
@@ -23,7 +23,7 @@ const ReservationList = ({reservations}) => {
                 <th></th>
               </tr>
             </thead>
-                {allReservations} 
+                {allReservations}
           </table>
         </div>
 
