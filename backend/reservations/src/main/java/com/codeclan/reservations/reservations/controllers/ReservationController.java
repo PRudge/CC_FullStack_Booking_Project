@@ -37,9 +37,9 @@ public class ReservationController {
         return reservationRepository.findReservationsForAGivenDateForAGivenTime(date, startTime);
     }
 
-    @GetMapping("/{Id}")
-    public List<Reservation> getFindReservationById(@PathVariable Long Id){
-        return reservationRepository.findReservationsById(Id);
-    }
+//    @GetMapping("/{Id}")
+//    public List<Reservation> getFindReservationById(@PathVariable Long Id){
+//        return reservationRepository.findReservationsById(Id);
+//    }
 
 }
