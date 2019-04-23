@@ -33,7 +33,7 @@ class EditFormContainer extends Component {
     })
   }
   render(){
-    if(!this.state.reservation){
+    if(!this.state.reservation || !this.state.customer){
       return <h1>loading</h1>;
     }
     return <EditForm reservation={this.state.reservation} customer={this.state.customer} handleReservationEdit= {this.handleReservationEdit} />
