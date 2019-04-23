@@ -22,6 +22,15 @@ class App extends Component {
     })
   }
 
+
+  handleReservationDelete(id){
+    const request = new Request();
+    const url = '/reservations/' + id;
+    request.delete(url).then(() => {
+      window.location = '/reservations'
+    })
+  }
+
   render() {
     return (
       <Router >
