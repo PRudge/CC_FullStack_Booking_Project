@@ -3,6 +3,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -40,6 +42,25 @@ public class Reservation implements Serializable {
         this.restaurant = restaurant;
     }
 
+    public static boolean isAvailable(String date, String startTime, int numGuest, List<Reservation> reservations, Restaurant restaurant) {
+
+        int guestTotal = 0;
+
+        for (Reservation res: reservations){
+
+            if ((res.getStartTime().equals(startTime)) && (res.getDate().equals(date))) {
+                guestTotal += res.getNumGuest();
+            }
+        }
+
+        if (numGuest > (restaurant.getCapacity() - guestTotal)){
+            return false;
+        } else {
+            return true;
+        }
+
+    }
+
     public Long getId() {
         return Id;
     }
@@ -47,6 +68,7 @@ public class Reservation implements Serializable {
     public void setId(Long Id) {
         this.Id = Id;
     }
+
 
     public String getStartTime() {
         return startTime;
