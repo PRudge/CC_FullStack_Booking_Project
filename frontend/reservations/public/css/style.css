@@ -1,10 +1,10 @@
-body {
+/* body {
     height: 125vh;
     font-family: sans-serif;
     background-color: ghostWhite;
 }
 
-header {
+/* header {
     background-color: white;
     position: fixed;
     top: 0;
@@ -13,8 +13,8 @@ header {
     height: 80px;
     display: flex;
     align-items: center;
-}
-header * {
+} */
+/* header * {
     display: inline;
 }
 header img {
@@ -36,4 +36,4 @@ a {
 
 .reservationForm {
   padding-top: 100px;
-}
+} */ 
