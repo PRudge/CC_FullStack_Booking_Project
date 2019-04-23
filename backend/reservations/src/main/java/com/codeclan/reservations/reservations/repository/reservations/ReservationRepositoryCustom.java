@@ -8,4 +8,5 @@ public interface ReservationRepositoryCustom {
     List<Reservation> findReservationsForAGivenCustomer(Long customerId);
     List<Reservation> findAllReservations();
     List<Reservation> findReservationsForAGivenDateForAGivenTime(String date, String startTime);
+//    Reservation findReservationsById(Long Id);
 }

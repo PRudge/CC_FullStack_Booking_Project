@@ -13,9 +13,6 @@ const NavBar = (props) => {
         <li className="navLink">
           <Link to="/reservations/new">Create Reservations</Link>
         </li>
-        <li className="navLink">
-          <Link to="/edit/:id">Edit Reservations</Link>
-        </li>
 
       </ul>
     </header>

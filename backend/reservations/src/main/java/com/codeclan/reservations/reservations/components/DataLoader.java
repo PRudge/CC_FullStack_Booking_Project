@@ -28,13 +28,13 @@ public class DataLoader implements ApplicationRunner {
     }
 
     public void run(ApplicationArguments args){
-        Customer customer1 = new Customer("John", "Smith", 345353455);
+        Customer customer1 = new Customer("John", "Smith", "345353455");
         customerRepository.save(customer1);
 
-        Customer customer2 = new Customer("John", "Doe", 123123123);
+        Customer customer2 = new Customer("John", "Doe", "123123123");
         customerRepository.save(customer2);
 
-        Customer customer3 = new Customer("Jane", "Cameron", 1231523543);
+        Customer customer3 = new Customer("Jane", "Cameron", "1231523543");
         customerRepository.save(customer3);
 
         Restaurant restaurant1 = new Restaurant("CodeClan Bistro", 10, "12:00-22:00");

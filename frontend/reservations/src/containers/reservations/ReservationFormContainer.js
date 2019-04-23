@@ -12,6 +12,7 @@ class ReservationFormContainer extends Component {
 
   handleReservationPost(reservation){
     const request = new Request();
+    // if we add /new, it is working, check with the team
       request.post('/reservations', reservation).then(() => {
       // window.location = '/reservations'
     })

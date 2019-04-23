@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
@@ -30,11 +29,10 @@ public class ReservationController {
     @Autowired
     CustomerRepository customerRepository;
 
-    @GetMapping("")
+    @GetMapping("/new")
     public List<Reservation> getFindAllReservations(){
         return reservationRepository.findAll();
     }
-
 
     @GetMapping("/date/{date}")
     public List<Reservation> getFindReservationsByDate(@PathVariable String date){
@@ -51,7 +49,7 @@ public class ReservationController {
         return reservationRepository.findReservationsForAGivenDateForAGivenTime(date, startTime);
     }
 
-    @PostMapping("")
+    @PostMapping("/new")
     public Reservation createReservation(
             @RequestBody HashMap<String, String> body
     ) {
@@ -73,7 +71,6 @@ public class ReservationController {
         Optional<Customer> maybeCustomer = customerRepository.findById(customerId);
         Customer customer = maybeCustomer.get();
 
-
         List<Reservation> reservations = reservationRepository.findAll();
 
         if (Reservation.isAvailable(date, startTime, numGuest, reservations,restaurant)) {
@@ -92,8 +89,5 @@ public class ReservationController {
             return null;
        }
     }
-
-//    private
-    // TODO: add private method to tidy up createReservation route
 
 }
