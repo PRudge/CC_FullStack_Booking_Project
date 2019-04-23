@@ -46,13 +46,13 @@ class EditForm extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+    
           <input type="text" value = {this.state.startTime} name="startTime" onChange={e => this.setState({ startTime: e.target.value })}/>
-          <input type="text" value = {this.state.date} name="date" onChange={e => this.setState({ date: e.target.value })}/>
-          <input type="number" value = {this.state.numGuest} name="numGuest" onChange={e => this.setState({ numGuest: e.target.value })}/>
-          <input type = "text" value = {this.state.firstName} name="firstName" onChange={e => this.setState({ firstName: e.target.value })} />
-          <input type = "text" value = {this.state.lastName} name="lastName" onChange={e => this.setState({ lastName: e.target.value })} />
+          <input type ="text" value = {this.state.firstName} name="firstName" onChange={e => this.setState({ firstName: e.target.value })} />
+          <input type ="text" value = {this.state.lastName} name="lastName" onChange={e => this.setState({ lastName: e.target.value })} />
+          <input type="date" value = {this.state.date} name="date" onChange={e => this.setState({ date: e.target.value })}/>
           <input type = "text" value = {this.state.phoneNum} name="phoneNum" onChange={e => this.setState({ phoneNum: e.target.value })} />
-
+          <input type="number" value = {this.state.numGuest} name="numGuest" onChange={e => this.setState({ numGuest: e.target.value })}/>
           <button type="submit">Save</button>
         </form>
       </div>

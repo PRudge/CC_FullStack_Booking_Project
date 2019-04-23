@@ -34,7 +34,7 @@ class App extends Component {
             />
             <Route
               path = '/reservations/new'
-              render={ () => <ReservationFormContainer reservations={this.state.reservations} /> }
+              render={ () => <ReservationFormContainer reservations={this.state.reservations}/> }
             />
             <Route path="/reservations/edit/:id" render = {(props) =>{
               const id = props.match.params.id;
