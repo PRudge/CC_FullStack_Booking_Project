@@ -32,9 +32,9 @@ class EditForm extends Component {
 
   render(){
 
-    const customerOptions = this.props.customer.map((customerItem, index) => {
-      return <option key={index} value={customerItem._links.self.href}>{customerItem.name}</option>
-    })
+    // const customerOptions = this.props.customer.map((customerItem, index) => {
+    //   return <option key={index} value={customerItem._links.self.href}>{customerItem.name}</option>
+    // })
 
     return (
       <div>
@@ -45,9 +45,9 @@ class EditForm extends Component {
           {/* <input type = "text" value = {this.state.customer.firstName} name="firstName" onChange={e => this.setState({ customer.firstName: e.target.value })} /> */}
 
 
-          <select name="customer" onChange={e => this.setState({ customer: e.target.value })}>
-            {customerOptions}
-          </select>
+          {/* <select name="customer" onChange={e => this.setState({ customer: e.target.value })}>
+              {customerOptions}
+          </select> */}
           <button type="submit">Save</button>
         </form>
       </div>
