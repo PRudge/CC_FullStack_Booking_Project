@@ -12,15 +12,15 @@
 }
 
 .table tr:nth-child(even){
-  background-color: #ade0f4;
+  background-color: #aee1f5;
 }
 
 .table tr:nth-child(odd){
-  background-color:	#C5EEFE;
+  background-color:	#bae4f4;
 }
 
 .table  tr:hover{
-  background-color: #7CDAFF;
+  background-color: #85d5f5;
 }
 
 .table th {
