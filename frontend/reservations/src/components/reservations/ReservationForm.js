@@ -39,8 +39,10 @@ const ReservationForm = (props) => {
               <option>18:00</option>
               <option>20:00</option>
             </select>
-            <input type="text" placeholder="First Name" name="firstName"/>
-            <input type="text" placeholder="Last Name" name="lastName"/>
+            <input type="text" placeholder="First Name" name="firstName" required
+       minlength="1"/>
+            <input type="text" placeholder="Last Name" name="lastName" required
+       minlength="1"/>
             <input type="date" placeholder="Date" name="date"/>
             <input type="text" placeholder="Phone Number" name="phoneNum" required
        minlength="10" maxlength="11"/>
