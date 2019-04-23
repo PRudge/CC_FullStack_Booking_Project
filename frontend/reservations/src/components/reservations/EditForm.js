@@ -6,8 +6,10 @@ class EditForm extends Component {
     this.state = {
       startTime: props.reservation.startTime,
       date: props.reservation.date,
-      numGuest: props.reservation.numGuest
-      // firstName: props.customer.firstName
+      numGuest: props.reservation.numGuest,
+      firstName: props.customer.firstName,
+      lastName: props.customer.lastName,
+      phoneNum: props.customer.phoneNum
       // customer: props.reservation._links.self.href.replace("{?projection=embedCustomer}", "")
       // customer: props.customer
     }
@@ -26,24 +28,21 @@ class EditForm extends Component {
       "startTime": this.state.startTime,
       "date": this.state.date,
       "numGuest": this.state.numGuest,
-      // "customer": this.state.customer
+      "firstName": this.state.firstName
     }
     this.props.handleReservationEdit(reservation);
   }
 
   render(){
-
-    // const customerOptions = this.props.customer.map((customerItem, index) => {
-    //   return <option key={index} value={customerItem._links.self.href}>{customerItem.name}</option>
-    // })
-
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
           <input type="text" value = {this.state.startTime} name="startTime" onChange={e => this.setState({ startTime: e.target.value })}/>
           <input type="text" value = {this.state.date} name="date" onChange={e => this.setState({ date: e.target.value })}/>
           <input type="number" value = {this.state.numGuest} name="numGuest" onChange={e => this.setState({ numGuest: e.target.value })}/>
-          {/* <input type = "text" value = {this.state.customer.firstName} name="firstName" onChange={e => this.setState({ customer.firstName: e.target.value })} /> */}
+          <input type = "text" value = {this.state.firstName} name="firstName" onChange={e => this.setState({ firstName: e.target.value })} />
+          <input type = "text" value = {this.state.lastName} name="lastName" onChange={e => this.setState({ lastName: e.target.value })} />
+          <input type = "text" value = {this.state.phoneNum} name="phoneNum" onChange={e => this.setState({ phoneNum: e.target.value })} />
 
 
           {/* <select name="customer" onChange={e => this.setState({ customer: e.target.value })}>
