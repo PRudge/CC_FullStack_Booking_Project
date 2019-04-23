@@ -21,9 +21,12 @@ class EditFormContainer extends Component {
     // request.get("/customers").then((customer) => {
     //   this.setState({customer: customer._embedded.customers})
     // });
+<<<<<<< HEAD
     request.get("/reservations/" + this.props.id + "/customer").then((customer) => {
       this.setState({customer: customer})
     })
+=======
+>>>>>>> 6340e8658598963566eb796b2269faf5032339d6
   }
 
   handleReservationEdit(reservation){
@@ -36,7 +39,11 @@ class EditFormContainer extends Component {
     if(!this.state.reservation){
       return <h1>loading</h1>;
     }
+<<<<<<< HEAD
     return <EditForm reservation={this.state.reservation} customer={this.state.customer} handleReservationEdit= {this.handleReservationEdit} />
+=======
+    return <EditForm reservation={this.state.reservation} handleReservationEdit= {this.handleReservationEdit} />
+>>>>>>> 6340e8658598963566eb796b2269faf5032339d6
 
   }
 

@@ -7,7 +7,10 @@ class EditForm extends Component {
       startTime: props.reservation.startTime,
       date: props.reservation.date,
       numGuest: props.reservation.numGuest
+<<<<<<< HEAD
       // firstName: props.customer.firstName
+=======
+>>>>>>> 6340e8658598963566eb796b2269faf5032339d6
       // customer: props.reservation._links.self.href.replace("{?projection=embedCustomer}", "")
       // customer: props.customer
     }
