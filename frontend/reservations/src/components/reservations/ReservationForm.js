@@ -41,10 +41,10 @@ const ReservationForm = (props) => {
             </select>
             <input type="text" placeholder="First Name" name="firstName"/>
             <input type="text" placeholder="Last Name" name="lastName"/>
-            <input type="text" placeholder="date" name="date"/>
-            <input type="text" placeholder="phoneNum" name="phoneNum" required
+            <input type="text" placeholder="Date" name="date"/>
+            <input type="text" placeholder="Phone Number" name="phoneNum" required
        minlength="10" maxlength="11"/>
-            <input type="number" placeholder="numGuest" name="numGuest"/>
+            <input type="number" placeholder="Total Guests" name="numGuest"/>
             <button type="submit">Save</button>
           </form>
         </div>
