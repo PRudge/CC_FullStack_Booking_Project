@@ -5,6 +5,11 @@ const Reservation = (props) => {
 
   if(!props.date && !props.startTime && !props.numGuest) { return null; }
 
+  const onDelete = () => {
+    props.handleReservationDelete(props.id)
+  }
+
+
   return (
     <div>
         <tr>
@@ -17,11 +22,12 @@ const Reservation = (props) => {
             <form method="GET">
               <input type="submit" value="edit" />
             </form>
-            <form action="/products/<%= product.id %>/delete" method="POST">
-              <input type="submit" value="delete" />
+            <form>
+
             </form>
           </td>
         </tr>
+        <button onClick={onDelete}>Delete</button>
     </div>
   )
 

@@ -13,6 +13,8 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {reservations: []}
+
+    this.handleReservationDelete = this.handleReservationDelete.bind(this)
   }
 
   componentDidMount() {
@@ -39,7 +41,7 @@ class App extends Component {
           <Switch>
             <Route
               exact path = '/reservations'
-              render={() => <ReservationList reservations={this.state.reservations}/>}
+              render={() => <ReservationList reservations={this.state.reservations} handleReservationDelete={this.handleReservationDelete} />}
             />
             <Route
               path = '/reservations/new'
