@@ -11,24 +11,19 @@ const Reservation = (props) => {
 
 
   return (
-    <div>
         <tr>
-          <td>{props.firstName} {props.lastName}</td>
-          <td>{props.date}</td>
-          <td>{props.startTime}</td>
-          <td>{props.numGuest}</td>
-          <td>{props.phoneNum}</td>
-          <td>
-            <form method="GET">
-              <input type="submit" value="edit" />
-            </form>
-            <form>
-
-            </form>
-          </td>
+            <td>{props.firstName} {props.lastName}</td>
+            <td>{props.date}</td>
+            <td>{props.startTime}</td>
+            <td>{props.numGuest}</td>
+            <td>{props.phoneNum}</td>
+            <td>
+              <button>
+                <a href={"/reservations/edit/" + props.id}>Edit</a>
+              </button>
+              <button onClick={onDelete}>Delete</button>
+            </td>
         </tr>
-        <button onClick={onDelete}>Delete</button>
-    </div>
   )
 
 
