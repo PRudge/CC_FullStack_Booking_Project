@@ -18,9 +18,9 @@ class EditFormContainer extends Component {
       .then((reservation) => {
         this.setState({reservation: reservation})
       });
-    request.get("/customers").then((customer) => {
-      this.setState({customer: customer._embedded.customers})
-    });
+    // request.get("/customers").then((customer) => {
+    //   this.setState({customer: customer._embedded.customers})
+    // });
   }
 
   handleReservationEdit(reservation){
@@ -30,10 +30,10 @@ class EditFormContainer extends Component {
     })
   }
   render(){
-    if(!this.state.customer || !this.state.reservation){
+    if(!this.state.reservation){
       return <h1>loading</h1>;
     }
-    return <EditForm customer = {this.state.customer} reservation={this.state.reservation} handleReservationEdit= {this.handleReservationEdit} />
+    return <EditForm reservation={this.state.reservation} handleReservationEdit= {this.handleReservationEdit} />
 
   }
 

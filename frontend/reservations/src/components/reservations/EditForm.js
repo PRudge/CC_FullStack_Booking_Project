@@ -6,9 +6,9 @@ class EditForm extends Component {
     this.state = {
       startTime: props.reservation.startTime,
       date: props.reservation.date,
-      numGuest: props.reservation.numGuest,
+      numGuest: props.reservation.numGuest
       // customer: props.reservation._links.self.href.replace("{?projection=embedCustomer}", "")
-      customer: props.customer
+      // customer: props.customer
     }
     console.log("EditForm after constructor: ", this.state);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,7 +25,7 @@ class EditForm extends Component {
       "startTime": this.state.startTime,
       "date": this.state.date,
       "numGuest": this.state.numGuest,
-      "customer": this.state.customer
+      // "customer": this.state.customer
     }
     this.props.handleReservationEdit(reservation);
   }
