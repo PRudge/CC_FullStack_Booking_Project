@@ -21,7 +21,7 @@ public class Customer {
     private String lastName;
 
     @Column(name = "phone_number")
-    private int phoneNum;
+    private String phoneNum;
 
     @JsonIgnoreProperties("customers")
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
@@ -29,7 +29,7 @@ public class Customer {
 
     public Customer(){}
 
-    public Customer(String firstName, String lastName,int phoneNum){
+    public Customer(String firstName, String lastName, String phoneNum){
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNum = phoneNum;
@@ -60,11 +60,11 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public int getPhoneNum() {
+    public String getPhoneNum() {
         return phoneNum;
     }
 
-    public void setPhoneNum(int phoneNum) {
+    public void setPhoneNum(String phoneNum) {
         this.phoneNum = phoneNum;
     }
 
