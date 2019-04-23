@@ -30,7 +30,7 @@ const ReservationForm = (props) => {
 
       return (
         <div>
-          <form onSubmit={handleSubmit} className="reservationForm">
+          <form onSubmit={handleSubmit}>
             <input type="text" placeholder="startTime" name="startTime"/>
             <input type="text" placeholder="First Name" name="firstName"/>
             <input type="text" placeholder="Last Name" name="lastName"/>
