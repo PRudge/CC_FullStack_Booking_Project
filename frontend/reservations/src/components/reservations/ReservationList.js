@@ -4,19 +4,29 @@ import Reservation from './Reservation';
 const ReservationList = ({reservations}) => {
     const allReservations = reservations.map((reservation) => {
       return (
-        <li key={reservation.id} className="reservation-item">
+        <div key={reservation.id} className="reservation-item">
           <div className="reservation">
             <Reservation firstName={reservation.customer.firstName} lastName={reservation.customer.lastName} date={reservation.date} startTime={reservation.startTime} numGuest={reservation.numGuest} phoneNum={reservation.customer.phoneNum}/>
           </div>
-        </li>
+        </div>
       );
     });
 
     return (
-        <ul className='reservations-list'>
-          <h3>Reservation List container</h3>
-          {allReservations}
-        </ul>
+        <div className='reservations-container'>
+          <table className="table">
+            <tr>
+              <th>Name</th>
+              <th>Date</th>
+              <th>Start time</th>
+              <th>Total Guests</th>
+              <th>Phone Number</th>
+              <th></th>
+            </tr>
+
+            {allReservations}
+          </table>
+        </div>
 
     )
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReservationTable from '../../css/ReservationsTable.css';
 
 const Reservation = (props) => {
 
@@ -6,12 +7,21 @@ const Reservation = (props) => {
 
   return (
     <div>
-      <h4>Reservation Container</h4>
-      <p>Name: {props.firstName} {props.lastName}</p>
-      <p>Date: {props.date}</p>
-      <p>Start time: {props.startTime}</p>
-      <p>Number of Guests: {props.numGuest}</p>
-      <p>Phone Number: {props.phoneNum}</p>
+        <tr>
+          <td>{props.firstName} {props.lastName}</td>
+          <td>{props.date}</td>
+          <td>{props.startTime}</td>
+          <td>{props.numGuest}</td>
+          <td>{props.phoneNum}</td>
+          <td>
+            <form method="GET">
+              <input type="submit" value="edit" />
+            </form>
+            <form action="/products/<%= product.id %>/delete" method="POST">
+              <input type="submit" value="delete" />
+            </form>
+          </td>
+        </tr>
     </div>
   )
 
