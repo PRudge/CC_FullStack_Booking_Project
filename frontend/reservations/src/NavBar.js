@@ -1,9 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import ReservationTable from './css/ReservationsTable.css';
-
-
 const NavBar = (props) => {
   return (
     <header>

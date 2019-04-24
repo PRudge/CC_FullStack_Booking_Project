@@ -6,6 +6,7 @@ import ReservationList from './components/reservations/ReservationList';
 import ReservationFormContainer from './containers/reservations/ReservationFormContainer';
 import EditFormContainer from './containers/reservations/EditFormContainer';
 import ErrorPage from './components/reservations/ErrorPage';
+import ReservationTable from './css/ReservationsTable.css';
 
 
 
