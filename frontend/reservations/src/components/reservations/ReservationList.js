@@ -3,8 +3,6 @@ import Reservation from './Reservation';
 
 const ReservationList = ({reservations, handleReservationDelete}) => {
     const allReservations = reservations.map((reservation) => {
-      // <tbody key={reservation.id} className="reservation">
-      // </tbody>
       return (
             <Reservation key={reservation.id} id={reservation.id} firstName={reservation.customer.firstName} lastName={reservation.customer.lastName} date={reservation.date} startTime={reservation.startTime} numGuest={reservation.numGuest} phoneNum={reservation.customer.phoneNum} handleReservationDelete={handleReservationDelete}/>
       );
@@ -12,8 +10,8 @@ const ReservationList = ({reservations, handleReservationDelete}) => {
 
     return (
       <div className = "tbl-container">
-          <table className="table">
-          {/* <div className="tbl-header"> */}
+          <table className="tbl-layout">
+          
             <thead>
               <tr>
                 <th>Name</th>
@@ -24,12 +22,11 @@ const ReservationList = ({reservations, handleReservationDelete}) => {
                 <th></th>
               </tr>
             </thead>
-            {/* </div> */}
-            {/* <div className="tbl-content"> */}
-            <tbody className="reservation">
+
+            <tbody>
               {allReservations}
             </tbody>
-            {/* </div> */}
+
           </table>
        </div>
     )
