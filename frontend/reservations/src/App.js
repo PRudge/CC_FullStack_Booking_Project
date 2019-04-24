@@ -27,7 +27,7 @@ class App extends Component {
       this.setState({reservations: data._embedded.reservations})
 
     let request2 = new Request()
-    request2.get('/reservations/1/restaurant').then((data) => {
+    request2.get('/restaurants/1').then((data) => {
         this.setState({restaurantCapacity: data.capacity}) //() => {console.log("capacity:", this.state.restaurantCapacity)}
       })
     })
@@ -47,14 +47,12 @@ class App extends Component {
 
     for (let i=0 ; i < this.state.reservations.length; i++) {
       let reservation = this.state.reservations[i];
-      console.log("reservation", reservation );
         if (reservation.startTime === startTime && reservation.date === date) {
-          console.log("I am a reservation start", reservation.startTime, startTime)
           let guests = reservation.numGuest;
           totalGuest += guests;
         }
       }
-     if ( newGuests < (this.state.restaurantCapacity - totalGuest)){}
+     return ( newGuests < (this.state.restaurantCapacity - totalGuest))
   }
 
   render() {

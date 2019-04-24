@@ -17,7 +17,7 @@ class ReservationFormContainer extends Component {
       request.post('/reservations', reservation).then(() => {
       window.location = '/reservations'
     })
-  } else {
+    } else {
     window.alert("no space bitches")
   }
 }
