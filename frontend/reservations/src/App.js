@@ -71,7 +71,7 @@ class App extends Component {
             />
             <Route path="/reservations/edit/:id" render = {(props) =>{
               const id = props.match.params.id;
-              return <EditFormContainer id = {id} />
+              return <EditFormContainer id = {id} isAvailable={this.isAvailable}/>
             }}
           />
 
