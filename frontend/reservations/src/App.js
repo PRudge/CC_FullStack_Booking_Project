@@ -43,25 +43,27 @@ class App extends Component {
           <NavBar />
           <Switch>
             <Route
-              exact path = '/'
-              render={() => <ReservationList reservations={this.state.reservations} handleReservationDelete={this.handleReservationDelete} />}
+              exact path ='/' render={() => <ReservationList reservations={this.state.reservations} handleReservationDelete={this.handleReservationDelete} />}/>
+              <Route
+                exact path = '/reservations'
+                render={() => <ReservationList reservations={this.state.reservations} handleReservationDelete={this.handleReservationDelete} />}
+              />
+              <Route
+                path = '/reservations/new'
+                render={ () => <ReservationFormContainer reservations={this.state.reservations}/> }
+              />
+              <Route path="/reservations/edit/:id" render = {(props) =>{
+                const id = props.match.params.id;
+                return <EditFormContainer id = {id} />
+              }}
             />
-            <Route
-              path = '/reservations/new'
-              render={ () => <ReservationFormContainer reservations={this.state.reservations}/> }
-            />
-            <Route path="/reservations/edit/:id" render = {(props) =>{
-              const id = props.match.params.id;
-              return <EditFormContainer id = {id} />
-            }}
-          />
 
-          <Route component={ErrorPage} />
-        </Switch>
-      </React.Fragment>
-    </Router>
-  );
-}
+            <Route component={ErrorPage} />
+          </Switch>
+        </React.Fragment>
+      </Router>
+    );
+  }
 }
 
 export default App;
