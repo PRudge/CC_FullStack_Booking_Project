@@ -5,7 +5,10 @@ const ReservationList = ({reservations, handleReservationDelete}) => {
     const allReservations = reservations.map((reservation) => {
       return (
         <tbody key={reservation.id} className="reservation">
-            <Reservation id={reservation.id} firstName={reservation.customer.firstName} lastName={reservation.customer.lastName} date={reservation.date} startTime={reservation.startTime} numGuest={reservation.numGuest} phoneNum={reservation.customer.phoneNum} handleReservationDelete={handleReservationDelete}/>
+            <Reservation id={reservation.id} firstName={reservation.customer.firstName}
+            lastName={reservation.customer.lastName} date={reservation.date} startTime={reservation.startTime}
+            numGuest={reservation.numGuest} phoneNum={reservation.customer.phoneNum}
+            handleReservationDelete={handleReservationDelete} />
         </tbody>
       );
     });
