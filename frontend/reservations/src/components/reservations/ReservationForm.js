@@ -28,6 +28,7 @@ const ReservationForm = (props) => {
       })
       .then(reservation => props.handleReservationPost(reservation));
   }
+  let today = new Date().toISOString().slice(0, 10);
 
       return (
         <div>
@@ -49,7 +50,7 @@ const ReservationForm = (props) => {
               <input type="text" className= "last-name" name="lastName" required/>
             </label>
             <label for = "date"><span>Date:</span>
-              <input type="date" className= "date" name="date" required/>
+              <input type="date" className= "date" name="date" min={today} required/>
             </label>
             <label for = "phoneNum"><span>Phone Number:</span>
               <input type="text" className= "phone-num" name="phoneNum" required/>
@@ -59,7 +60,8 @@ const ReservationForm = (props) => {
             </label>
 
             </fieldset>
-            <input type="submit" value="Save" id="save"/>
+            {/* <input type="submit" value="Save" id="save"/> */}
+            <button id="save" type="submit">Save</button>
           </form>
         </div>
     )

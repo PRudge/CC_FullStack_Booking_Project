@@ -25,10 +25,14 @@ class EditFormContainer extends Component {
   }
 
   handleReservationEdit(reservation){
-    const request = new Request();
-    request.patch('/reservations/' + this.props.id, reservation).then(() => {
-      window.location = '/reservations'
-    })
+    if ( this.props.isAvailable(reservation.startTime, reservation.date, (reservation.numGuest - reservation.numGuest))) {
+      const request = new Request();
+      request.patch('/reservations/' + this.props.id, reservation).then(() => {
+        window.location = '/reservations'
+      })
+    } else {
+      window.alert("no space bitches")
+    }
   }
 
   render(){

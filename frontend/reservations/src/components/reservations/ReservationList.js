@@ -4,7 +4,10 @@ import Reservation from './Reservation';
 const ReservationList = ({reservations, handleReservationDelete}) => {
     const allReservations = reservations.map((reservation) => {
       return (
-            <Reservation key={reservation.id} id={reservation.id} firstName={reservation.customer.firstName} lastName={reservation.customer.lastName} date={reservation.date} startTime={reservation.startTime} numGuest={reservation.numGuest} phoneNum={reservation.customer.phoneNum} handleReservationDelete={handleReservationDelete}/>
+            <Reservation key={reservation.id} id={reservation.id}
+            firstName={reservation.customer.firstName} lastName={reservation.customer.lastName}
+            date={reservation.date} startTime={reservation.startTime} numGuest={reservation.numGuest}
+            phoneNum={reservation.customer.phoneNum} handleReservationDelete={handleReservationDelete}/>
       );
     });
 
