@@ -1,6 +1,5 @@
 import React from 'react';
 import ReservationTable from '../../css/ReservationsTable.css';
-import NoCapacity from './NoCapacity';
 
 const Reservation = (props) => {
 
