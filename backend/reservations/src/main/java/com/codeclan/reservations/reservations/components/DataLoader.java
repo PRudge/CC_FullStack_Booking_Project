@@ -40,19 +40,18 @@ public class DataLoader implements ApplicationRunner {
         Restaurant restaurant1 = new Restaurant("CodeClan Bistro", 10, "12:00-22:00");
         restaurantRepository.save(restaurant1);
 
-        Reservation reservation1 = new Reservation("2019-04-23", "12:30", 4, customer1, restaurant1);
+        Reservation reservation1 = new Reservation("2019-04-23", "12:00", 2, customer1, restaurant1);
         reservationRepository.save(reservation1);
 
-        Reservation reservation2 = new Reservation("2019-04-23","14:30", 3, customer2, restaurant1);
+        Reservation reservation2 = new Reservation("2019-04-23","14:00", 3, customer2, restaurant1);
         reservationRepository.save(reservation2);
 
-        Reservation reservation3 = new Reservation("2019-04-23","14:30", 7, customer3, restaurant1);
+        Reservation reservation3 = new Reservation("2019-04-23","14:00", 2, customer3, restaurant1);
         reservationRepository.save(reservation3);
 
-        Reservation reservation4 = new Reservation("2019-04-27","14:30", 7, customer3, restaurant1);
+        Reservation reservation4 = new Reservation("2019-04-27","14:00", 1, customer3, restaurant1);
         reservationRepository.save(reservation4);
 
     }
 
 }
-
