@@ -12,7 +12,9 @@ import ErrorPage from './components/reservations/ErrorPage';
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = {reservations: []}
+    this.state = {
+      reservations: []
+    }
 
     this.handleReservationDelete = this.handleReservationDelete.bind(this)
   }
