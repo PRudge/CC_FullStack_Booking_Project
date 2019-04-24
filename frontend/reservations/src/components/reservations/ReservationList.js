@@ -3,16 +3,17 @@ import Reservation from './Reservation';
 
 const ReservationList = ({reservations, handleReservationDelete}) => {
     const allReservations = reservations.map((reservation) => {
+      // <tbody key={reservation.id} className="reservation">
+      // </tbody>
       return (
-        <tbody key={reservation.id} className="reservation">
-            <Reservation id={reservation.id} firstName={reservation.customer.firstName} lastName={reservation.customer.lastName} date={reservation.date} startTime={reservation.startTime} numGuest={reservation.numGuest} phoneNum={reservation.customer.phoneNum} handleReservationDelete={handleReservationDelete}/>
-        </tbody>
+            <Reservation key={reservation.id} id={reservation.id} firstName={reservation.customer.firstName} lastName={reservation.customer.lastName} date={reservation.date} startTime={reservation.startTime} numGuest={reservation.numGuest} phoneNum={reservation.customer.phoneNum} handleReservationDelete={handleReservationDelete}/>
       );
     });
 
     return (
-        <div className='reservations-container'>
+      <div className = "tbl-container">
           <table className="table">
+          {/* <div className="tbl-header"> */}
             <thead>
               <tr>
                 <th>Name</th>
@@ -23,10 +24,14 @@ const ReservationList = ({reservations, handleReservationDelete}) => {
                 <th></th>
               </tr>
             </thead>
-                {allReservations}
+            {/* </div> */}
+            {/* <div className="tbl-content"> */}
+            <tbody className="reservation">
+              {allReservations}
+            </tbody>
+            {/* </div> */}
           </table>
-        </div>
-
+       </div>
     )
 }
 

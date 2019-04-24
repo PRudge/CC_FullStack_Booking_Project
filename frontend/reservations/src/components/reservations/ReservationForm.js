@@ -33,8 +33,8 @@ const ReservationForm = (props) => {
         <div>
           <form className="reservation-form" onSubmit={handleSubmit}>
           <fieldset><legend>Add a Reservation</legend>
-            <label for="time"><span>Choose Time:</span>
-            <select name = "startTime" className= "time">
+            <label for="startTime"><span>Choose Time:</span>
+            <select name = "startTime" className= "start-time">
               <option>12:00</option>
               <option>14:00</option>
               <option>16:00</option>
@@ -42,20 +42,20 @@ const ReservationForm = (props) => {
               <option>20:00</option>
             </select>
             </label>
-            <label for="first-name"><span>First Name:</span>
+            <label for="firstName"><span>First Name:</span>
               <input type="text"  className= "first-name" name="firstName" required/>
             </label>
-            <label for = "last-name"><span>Last Name:</span>
+            <label for = "lastName"><span>Last Name:</span>
               <input type="text" className= "last-name" name="lastName" required/>
             </label>
             <label for = "date"><span>Date:</span>
               <input type="date" className= "date" name="date" required/>
             </label>
-            <label for = "phone-num"><span>Phone Number:</span>
+            <label for = "phoneNum"><span>Phone Number:</span>
               <input type="text" className= "phone-num" name="phoneNum" required/>
             </label>
             <label for = "numGuest"><span>Number of Guests:</span>
-              <input type="number" className="num-guest" name="numGuest" required/>
+              <input type="number" className="num-guest" name="numGuest" min="1" max="50" required/>
             </label>
 
             </fieldset>
