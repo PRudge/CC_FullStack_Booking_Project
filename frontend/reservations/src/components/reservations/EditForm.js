@@ -61,10 +61,8 @@ class EditForm extends Component {
           <input type="date" value={this.state.date} placeholder="Date" name="date" min={today} onChange={e => this.setState({ date: e.target.value })}/>
           <input type = "text" value={this.state.phoneNum} name="phoneNum" placeholder="Phone Number" minLength="10" maxLength="11" required  onChange={e => this.setState({ phoneNum: e.target.value })} />
           <input type="number" value={this.state.numGuest} name="numGuest" placeholder="Total Guests" required onChange={e => this.setState({ numGuest: e.target.value })}/>
-          <button type="submit">Save</button>
-          <button>
-            <a href={"/reservations"}>Discard Charges</a>
-          </button>
+          <input type="submit" value="Save" id="save" onclick="window.location='/reservations';"/>
+          <input type="button" value="Discard Changes" id="cancel" onClick = { () =>  window.location='/reservations'}/>
         </form>
       </div>
     )
