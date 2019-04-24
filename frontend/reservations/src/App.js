@@ -43,7 +43,7 @@ class App extends Component {
           <NavBar />
           <Switch>
             <Route
-              exact path = '/reservations'
+              exact path = '/'
               render={() => <ReservationList reservations={this.state.reservations} handleReservationDelete={this.handleReservationDelete} />}
             />
             <Route
