@@ -1,5 +1,11 @@
 body {
   font-family: 'Oswald', sans-serif;
+  background-color: lightgrey;
+
+}
+
+header {
+  background-color: white;
 }
 
 
@@ -199,9 +205,22 @@ legend {
   width:6em;;
 }
 
-.reservation-form input[type=date] {
-  /* width:9.5em; */
+
+.reservation-form input[type=change-date] {
+  /* width:9.5em;*/
 }
+
+/*Allows to control the placeholder text for the calendar picker*/
+/* .reservation-form input[type=date]:before {
+  content: attr(placeholder) !important;
+  color: #5C5C5C;
+  margin-right: 2.8em;
+}
+.reservation-form input[type=date]:focus:before,
+.reservation-form input[type=date].hasValue:before {
+  content: "" !important;
+  margin-right: 0;
+} */
 
 .reservation-form input[type=number] {
   width:2em;
@@ -209,6 +228,7 @@ legend {
 
 .reservation-form input[type=submit],
 .reservation-form input[type=button]{
+  margin-right: 1em;
   font-size: 1em;
   background: #127abe;
   border: 1px solid #002b6e;
@@ -230,6 +250,49 @@ legend {
   font-weight: 400;
 }
 
+button {
+  margin-right: 1em;
+  font-size: 1em;
+  background: #127abe;
+  border: 1px solid #002b6e;
+  padding: .25em 1em 0.25em 1em;
+  color: #e7fff7;
+  border-radius: 0.25em;
+  border-radius: 0.25em;
+  font-weight: 400;
+}
+
+button:hover {
+  background: #e7fff7;
+  border: 1px solid #002b6e;
+  padding: .25em 1em 0.25em 1em;
+  color: #45a2e8;
+  border-radius: 0.25em;
+  border-radius: 0.25em;
+  font-weight: 400;
+}
+
+button a {
+  text-decoration: none;
+  color:#e7fff7;
+}
+
+button a:visited {
+  text-decoration: none;
+}
+
+button a:hover {
+  text-decoration: none;
+  color: #45a2e8;
+}
+
+button a:focus {
+  text-decoration: none;
+}
+
+button a:hover, button a:active  {
+  text-decoration: none;
+}
 
 /***********/
 /* Nav Bar */

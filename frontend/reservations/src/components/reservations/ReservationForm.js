@@ -49,7 +49,7 @@ const ReservationForm = (props) => {
               <input type="text" className= "last-name" name="lastName" required/>
             </label>
             <label htmlFor="date"><span>Date:</span>
-              <input type="date" className= "date" name="date" min={today} required/>
+              <input type="date" className= "date" name="date" min={today} placeholder="Enter Date" required/>
             </label>
             <label htmlFor="phoneNum"><span>Phone Number:</span>
               <input type="text" className= "phone-num" name="phoneNum" minLength="10" maxLength="11" required/>
@@ -59,7 +59,7 @@ const ReservationForm = (props) => {
             </label>
 
             </fieldset>
-            <input type="submit" value="Save" id="save"/>
+            <input type="submit" value="Save" id="save" />
             <input type="button" value="Go Back" id="cancel" onClick = { () =>  window.location='/reservations'}/>
           </form>
         </div>
