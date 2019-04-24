@@ -1,6 +1,5 @@
 import React from 'react';
 import Request from '../../helpers/Request';
-import ReservationTable from '../../css/ReservationsTable.css';
 
 const ReservationForm = (props) => {
 
@@ -53,15 +52,14 @@ const ReservationForm = (props) => {
               <input type="date" className= "date" name="date" min={today} required/>
             </label>
             <label for = "phoneNum"><span>Phone Number:</span>
-              <input type="text" className= "phone-num" name="phoneNum" required/>
+              <input type="text" className= "phone-num" name="phoneNum" minLength="10" maxLength="11" required/>
             </label>
             <label for = "numGuest"><span>Number of Guests:</span>
               <input type="number" className="num-guest" name="numGuest" min="1" max="50" required/>
             </label>
 
             </fieldset>
-            {/* <input type="submit" value="Save" id="save"/> */}
-            <button id="save" type="submit">Save</button>
+            <input type="submit" value="Save" id="save"/>
           </form>
         </div>
     )
