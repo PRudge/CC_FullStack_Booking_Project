@@ -12,12 +12,7 @@ class EditForm extends Component {
       lastName: props.customer.lastName,
       phoneNum: props.customer.phoneNum,
     }
-    console.log("EditForm after constructor: ", this.state);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  componentWillReceiveProps(props) {
-    console.log('EditForm will receive props',props);
   }
 
   handleSubmit(event){
@@ -44,6 +39,7 @@ class EditForm extends Component {
 
   render(){
     let today = new Date().toISOString().slice(0, 10);
+
 
     return (
       <div>
@@ -75,7 +71,7 @@ class EditForm extends Component {
             </label>
           </fieldset>
         <input type="submit" value="Save" id="save" onClick = { () =>  window.location='/reservations'}/>
-        <input type="button" value="Discard Changes" id="cancel" onClick = { () =>  window.location='/reservations'}/>
+        <input type="button" value="Go Back" id="cancel" onClick = { () =>  window.location='/reservations'}/>
         </form>
       </div>
     )
