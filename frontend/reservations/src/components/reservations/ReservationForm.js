@@ -27,11 +27,12 @@ const ReservationForm = (props) => {
       })
       .then(reservation => props.handleReservationPost(reservation));
   }
+  let today = new Date().toISOString().slice(0, 10);
 
       return (
         <div>
           <form onSubmit={handleSubmit}>
-            <label for="time-slot-select">Choose Time:</label>
+            <label>Choose Time:</label>
             <select name="startTime">
               <option>12:00</option>
               <option>14:00</option>
@@ -40,12 +41,12 @@ const ReservationForm = (props) => {
               <option>20:00</option>
             </select>
             <input type="text" placeholder="First Name" name="firstName" required
-              minlength="1"/>
+              minLength="1"/>
             <input type="text" placeholder="Last Name" name="lastName" required
-              minlength="1"/>
-            <input type="date" placeholder="Date" name="date"/>
+              minLength="1"/>
+            <input type="date" placeholder="Date" name="date" min={today}/>
             <input type="text" placeholder="Phone Number" name="phoneNum" required
-              minlength="10" maxlength="11"/>
+              minLength="10" maxLength="11"/>
             <input type="number" placeholder="Total Guests" name="numGuest" min="1" max="50"/>
             <button type="submit">Save</button>
           </form>
