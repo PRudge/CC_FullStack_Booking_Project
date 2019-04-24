@@ -4,7 +4,12 @@ import ReservationTable from '../../css/ReservationsTable.css';
 const Reservation = (props) => {
 
   if(!props.date && !props.startTime && !props.numGuest) { return null; }
-  
+
+  const onDelete = () => {
+    props.handleReservationDelete(props.id)
+  }
+
+
   return (
         <tr>
             <td>{props.firstName} {props.lastName}</td>
@@ -14,11 +19,9 @@ const Reservation = (props) => {
             <td>{props.phoneNum}</td>
             <td>
               <button>
-                <a href={"/reservations/edit/" + props.id}>edit</a>
+                <a href={"/reservations/edit/" + props.id}>Edit</a>
               </button>
-              <form method="POST">
-                <input type="submit" value="delete" />
-              </form>
+              <button onClick={onDelete}>Delete</button>
             </td>
         </tr>
   )
