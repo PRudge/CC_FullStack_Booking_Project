@@ -13,12 +13,23 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {reservations: []}
+
+    this.handleReservationDelete = this.handleReservationDelete.bind(this)
   }
 
   componentDidMount() {
     let request = new Request()
     request.get('/reservations').then((data) => {
       this.setState({reservations: data._embedded.reservations})
+    })
+  }
+
+
+  handleReservationDelete(id){
+    const request = new Request();
+    const url = '/reservations/' + id;
+    request.delete(url).then(() => {
+      window.location = '/reservations'
     })
   }
 
@@ -30,7 +41,7 @@ class App extends Component {
           <Switch>
             <Route
               exact path = '/reservations'
-              render={() => <ReservationList reservations={this.state.reservations}/>}
+              render={() => <ReservationList reservations={this.state.reservations} handleReservationDelete={this.handleReservationDelete} />}
             />
             <Route
               path = '/reservations/new'

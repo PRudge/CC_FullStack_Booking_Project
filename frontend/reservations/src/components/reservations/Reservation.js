@@ -1,18 +1,29 @@
 import React from 'react';
+import ReservationTable from '../../css/ReservationsTable.css';
 
 const Reservation = (props) => {
 
   if(!props.date && !props.startTime && !props.numGuest) { return null; }
 
+  const onDelete = () => {
+    props.handleReservationDelete(props.id)
+  }
+
+
   return (
-    <div>
-      <h4>Reservation Container</h4>
-      <p>Name: {props.firstName} {props.lastName}</p>
-      <p>Date: {props.date}</p>
-      <p>Start time: {props.startTime}</p>
-      <p>Number of Guests: {props.numGuest}</p>
-      <p>Phone Number: {props.phoneNum}</p>
-    </div>
+        <tr>
+            <td>{props.firstName} {props.lastName}</td>
+            <td>{props.date}</td>
+            <td>{props.startTime}</td>
+            <td>{props.numGuest}</td>
+            <td>{props.phoneNum}</td>
+            <td>
+              <button>
+                <a href={"/reservations/edit/" + props.id}>Edit</a>
+              </button>
+              <button onClick={onDelete}>Delete</button>
+            </td>
+        </tr>
   )
 
 
