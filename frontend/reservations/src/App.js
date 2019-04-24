@@ -14,11 +14,13 @@ class App extends Component {
     super(props);
     this.state = {
       reservations: [],
-      restaurantCapacity: 0
+      restaurantCapacity: 0,
+      openingHours: null
     }
 
     this.handleReservationDelete = this.handleReservationDelete.bind(this)
     this.isAvailable = this.isAvailable.bind(this)
+    this.createTimeSlots = this.createTimeSlots.bind(this)
   }
 
   componentDidMount() {
@@ -29,6 +31,7 @@ class App extends Component {
     let request2 = new Request()
     request2.get('/restaurants/1').then((data) => {
         this.setState({restaurantCapacity: data.capacity}) //() => {console.log("capacity:", this.state.restaurantCapacity)}
+        this.setState({openingHours: data.opening_hours})
       })
     })
   }
@@ -40,6 +43,13 @@ class App extends Component {
     request.delete(url).then(() => {
       window.location = '/reservations'
     })
+  }
+
+  createTimeSlots() {
+    let timeSlots = [];
+    let startTime = this.openingHours.substring(0, 2);
+    let startDigits = Number(startTime);
+    console.log(startTime);
   }
 
   isAvailable(startTime, date, newGuests) {
