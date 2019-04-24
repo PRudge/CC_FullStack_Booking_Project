@@ -60,7 +60,7 @@ const ReservationForm = (props) => {
 
             </fieldset>
             <input type="submit" value="Save" id="save" />
-            <input type="button" value="Go Back" id="cancel" onClick = { () =>  window.location='/reservations'}/>
+            <input type="button" value="Go Back" id="go-back" onClick = { () =>  window.location='/reservations'}/>
           </form>
         </div>
     )

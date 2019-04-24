@@ -38,7 +38,7 @@ class EditForm extends Component {
   }
 
   render(){
-    // let today = new Date().toISOString().slice(0, 10);
+    let today = new Date().toISOString().slice(0, 10);
 
 
     return (
@@ -61,7 +61,7 @@ class EditForm extends Component {
               <input type ="text" value={this.state.lastName} placeholder="Last Name" name="lastName" required onChange={e => this.setState({ lastName: e.target.value })} />
             </label>
             <label htmlFor="date"><span>Date:</span>
-              <input type="date" value={this.state.date} placeholder="Date" name="date" onChange={e => this.setState({ date: e.target.value })}/>
+              <input type="date" value={this.state.date} placeholder="Date" name="date" min={today} onChange={e => this.setState({ date: e.target.value })}/>
             </label>
             <label><span>Phone Number:</span>
               <input type = "text" value={this.state.phoneNum} name="phoneNum" placeholder="Phone Number" minLength="10" maxLength="11" required  onChange={e => this.setState({ phoneNum: e.target.value })} />
@@ -70,8 +70,8 @@ class EditForm extends Component {
               <input type="number" value={this.state.numGuest} name="numGuest" placeholder="Total Guests" required onChange={e => this.setState({ numGuest: e.target.value })}/>
             </label>
           </fieldset>
-        <input type="submit" value="Save" id="save" onClick = { () =>  window.location='/reservations'}/>
-        <input type="button" value="Go Back" id="cancel" onClick = { () =>  window.location='/reservations'}/>
+        <input type="submit" value="Save" id="save" />
+        <input type="button" value="Go Back" id="go-back" onClick = { () =>  window.location='/reservations'}/>
         </form>
       </div>
     )
