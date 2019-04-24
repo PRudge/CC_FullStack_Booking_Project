@@ -1,5 +1,6 @@
 import React from 'react';
 import Request from '../../helpers/Request';
+import ReservationTable from '../../css/ReservationsTable.css';
 
 const ReservationForm = (props) => {
 
@@ -27,27 +28,40 @@ const ReservationForm = (props) => {
       })
       .then(reservation => props.handleReservationPost(reservation));
   }
+  let today = new Date().toISOString().slice(0, 10);
 
       return (
         <div>
-          <form onSubmit={handleSubmit}>
-            <label for="time-slot-select">Choose Time:</label>
-            <select name="startTime">
+          <form className="reservation-form" onSubmit={handleSubmit}>
+          <fieldset><legend>Add a Reservation</legend>
+            <label for="startTime"><span>Choose Time:</span>
+            <select name = "startTime" className= "start-time">
               <option>12:00</option>
               <option>14:00</option>
               <option>16:00</option>
               <option>18:00</option>
               <option>20:00</option>
             </select>
-            <input type="text" placeholder="First Name" name="firstName" required
-              minlength="1"/>
-            <input type="text" placeholder="Last Name" name="lastName" required
-              minlength="1"/>
-            <input type="date" placeholder="Date" name="date"/>
-            <input type="text" placeholder="Phone Number" name="phoneNum" required
-              minlength="10" maxlength="11"/>
-            <input type="number" placeholder="Total Guests" name="numGuest" min="1" max="50"/>
-            <button type="submit">Save</button>
+            </label>
+            <label for="firstName"><span>First Name:</span>
+              <input type="text"  className= "first-name" name="firstName" required/>
+            </label>
+            <label for = "lastName"><span>Last Name:</span>
+              <input type="text" className= "last-name" name="lastName" required/>
+            </label>
+            <label for = "date"><span>Date:</span>
+              <input type="date" className= "date" name="date" min={today} required/>
+            </label>
+            <label for = "phoneNum"><span>Phone Number:</span>
+              <input type="text" className= "phone-num" name="phoneNum" required/>
+            </label>
+            <label for = "numGuest"><span>Number of Guests:</span>
+              <input type="number" className="num-guest" name="numGuest" min="1" max="50" required/>
+            </label>
+
+            </fieldset>
+            {/* <input type="submit" value="Save" id="save"/> */}
+            <button id="save" type="submit">Save</button>
           </form>
         </div>
     )

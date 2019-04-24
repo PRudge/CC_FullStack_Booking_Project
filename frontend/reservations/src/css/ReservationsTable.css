@@ -1,13 +1,105 @@
-.table {
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+
+/************/
+/** Table  **/
+/************/
+.tbl-container{
+  width:80%;
+  font-size:1.5em;
+}
+
+.table{
+   display: block;
+   max-height: 50vh;
+   overflow-x: auto;
+   padding:3em;
+   border-radius: .25em;
+  /* width: 100%;
+  font-size:1.5em;
+  padding:30px;
+  overflow: scroll;
+  max-height: 50vh; */
+  /* border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd; */
+
+}
+.tbl-header{
+  background-color: rgba(255,255,255,0.3);
+  font-size:30px;;
+ }
+
+ tbody{
+  font-size:1.5em;
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 14px;
+  color: #000;
+  text-transform: uppercase;
+  background-color:#45a2e8;
+}
+
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 14px;
+  color: #000;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+tr:nth-child(even)  {
+  background-color: #f0f0f0;
+  /* color: red; */
+}
+
+tr:nth-child(odd)  {
+  background-color: lightgray;
+  /* color: red; */
+}
+
+tr:hover{
+  /* background-color: #85d5f5; */
+  background-color: #127abe;
+  color:white;
+  font-size:500;
+}
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+/* .table {
   display: block;
   max-height: 50vh;
   overflow: scroll;
+  padding:3em;
+  border-radius: .25em;
 }
+
 .table td, th {
  border: 1px solid #ddd;
  padding: 8px;
- text-align: center;
- font-family: 'Oswald', sans-serif;
  width: 10vw;
 }
 
@@ -36,4 +128,130 @@ padding-bottom: 12px;
 text-align: left;
 background-color: #2b7fa8;
 color: white;
+}
+
+/**********/
+/** Form **/
+/**********/
+
+.reservation-form {
+  margin: 1.25em;
+  max-width: 30em;
+  line-height: 1.5;
+}
+
+label {
+  display:block;
+  margin-bottom: .8em;
+  color: #45a2e8;
+  font-weight: 400;
+  font-size: 1em;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.reservation-form label > span {
+	float: left;
+	width: 10em;
+	font-size: 1em;
+}
+
+fieldset {
+  border-radius: 10px;
+  margin: 20px 0px 10px 0px;
+  padding: 1.25em;
+  background: #fafafa;
+  border:1px solid #127abe;
+}
+
+legend {
+  color: #45a2e8;
+  border-radius: 5px 5px 0px 0px;
+  background: #fafafa;
+  border:1px solid #127abe;
+  border-bottom: 0;
+  padding: 0 0.5em .25em 0.5em;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.reservation-form input[type=text],
+.reservation-form input[type=date],
+.reservation-form input[type=number],
+.reservation-form select,
+.reservation-form textarea {
+  border-radius: .25em;
+  border: 0px;
+  border: 1px solid #45a2e8;
+  font-size: 1em;
+  height: 1.6em;
+  font-weight: 400;
+  font-family:"Raleway";
+  outline: none;
+  color: #002b6e;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  -webkit-box-shadow: inset 0px 0px 3px 0 rgba(0,0,0,0.4);
+  box-shadow: inset 0px 0px 3px 0 rgba(0,0,0,0.4);
+  background: #ffffff;
+  width:40%;
+}
+
+.reservation-form select {
+  width:6em;;
+}
+
+.reservation-form input[type=date] {
+  width:9.5em;
+}
+
+.reservation-form input[type=number] {
+  width:2em;
+}
+
+.reservation-form input[type=submit]{
+  font-size: 1em;
+  background: #127abe;
+  border: 1px solid #002b6e;
+  padding: .25em 1em 0.25em 1em;
+  color: #e7fff7;
+  border-radius: 0.25em;
+  border-radius: 0.25em;
+  font-weight: 400;
+}
+
+.reservation-form input[type=submit]:hover{
+  background: #e7fff7;
+  border: 1px solid #002b6e;
+  padding: .25em 1em 0.25em 1em;
+  color: #45a2e8;
+  border-radius: 0.25em;
+  border-radius: 0.25em;
+  font-weight: 400;
+}
+
+/***********/
+/* Nav Bar */
+/***********/
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #127abe;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+  background-color: #0b5383;
 }

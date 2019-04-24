@@ -13,8 +13,12 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
+<<<<<<< HEAD
       reservations: [],
       restaurantCapacity: 0
+=======
+      reservations: []
+>>>>>>> develop
     }
 
     this.handleReservationDelete = this.handleReservationDelete.bind(this)
@@ -69,7 +73,11 @@ class App extends Component {
             />
             <Route
               path = '/reservations/new'
+<<<<<<< HEAD
               render={ () => <ReservationFormContainer reservations={this.state.reservations} isAvailable={this.isAvailable}/> }
+=======
+              render={ () => <ReservationFormContainer reservations={this.state.reservations}/> }
+>>>>>>> develop
             />
             <Route path="/reservations/edit/:id" render = {(props) =>{
               const id = props.match.params.id;
