@@ -38,7 +38,7 @@ public class ReservationController {
     }
 
 //    @GetMapping("/{Id}")
-//    public List<Reservation> getFindReservationById(@PathVariable Long Id){
+//    public Reservation getFindReservationById(@PathVariable Long Id){
 //        return reservationRepository.findReservationsById(Id);
 //    }
 
