@@ -200,14 +200,15 @@ legend {
 }
 
 .reservation-form input[type=date] {
-  width:9.5em;
+  /* width:9.5em; */
 }
 
 .reservation-form input[type=number] {
   width:2em;
 }
 
-.reservation-form input[type=submit]{
+.reservation-form input[type=submit],
+.reservation-form input[type=button]{
   font-size: 1em;
   background: #127abe;
   border: 1px solid #002b6e;
@@ -218,7 +219,8 @@ legend {
   font-weight: 400;
 }
 
-.reservation-form input[type=submit]:hover{
+.reservation-form input[type=submit]:hover,
+.reservation-form input[type=button]:hover{
   background: #e7fff7;
   border: 1px solid #002b6e;
   padding: .25em 1em 0.25em 1em;
@@ -227,6 +229,7 @@ legend {
   border-radius: 0.25em;
   font-weight: 400;
 }
+
 
 /***********/
 /* Nav Bar */

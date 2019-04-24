@@ -33,7 +33,7 @@ const ReservationForm = (props) => {
         <div>
           <form className="reservation-form" onSubmit={handleSubmit}>
           <fieldset><legend>Add a Reservation</legend>
-            <label for="startTime"><span>Choose Time:</span>
+            <label htmlFor="startTime"><span>Choose Time:</span>
             <select name = "startTime" className= "start-time">
               <option>12:00</option>
               <option>14:00</option>
@@ -42,24 +42,25 @@ const ReservationForm = (props) => {
               <option>20:00</option>
             </select>
             </label>
-            <label for="firstName"><span>First Name:</span>
+            <label htmlFor="firstName"><span>First Name:</span>
               <input type="text"  className= "first-name" name="firstName" required/>
             </label>
-            <label for = "lastName"><span>Last Name:</span>
+            <label htmlFor="lastName"><span>Last Name:</span>
               <input type="text" className= "last-name" name="lastName" required/>
             </label>
-            <label for = "date"><span>Date:</span>
+            <label htmlFor="date"><span>Date:</span>
               <input type="date" className= "date" name="date" min={today} required/>
             </label>
-            <label for = "phoneNum"><span>Phone Number:</span>
+            <label htmlFor="phoneNum"><span>Phone Number:</span>
               <input type="text" className= "phone-num" name="phoneNum" minLength="10" maxLength="11" required/>
             </label>
-            <label for = "numGuest"><span>Number of Guests:</span>
+            <label htmlFor="numGuest"><span>Number of Guests:</span>
               <input type="number" className="num-guest" name="numGuest" min="1" max="50" required/>
             </label>
 
             </fieldset>
             <input type="submit" value="Save" id="save"/>
+            <input type="button" value="Cancel" id="cancel" onClick = { () =>  window.location='/reservations'}/>
           </form>
         </div>
     )
