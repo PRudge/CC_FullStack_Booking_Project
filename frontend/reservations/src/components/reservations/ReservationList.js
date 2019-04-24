@@ -6,10 +6,16 @@ const ReservationList = ({reservations, handleReservationDelete}) => {
       // <tbody key={reservation.id} className="reservation">
       // </tbody>
       return (
-            <Reservation key={reservation.id} id={reservation.id}
-            firstName={reservation.customer.firstName} lastName={reservation.customer.lastName}
-            date={reservation.date} startTime={reservation.startTime} numGuest={reservation.numGuest}
-            phoneNum={reservation.customer.phoneNum} handleReservationDelete={handleReservationDelete}/>
+<<<<<<< HEAD
+        <tbody key={reservation.id} className="reservation">
+            <Reservation id={reservation.id} firstName={reservation.customer.firstName}
+            lastName={reservation.customer.lastName} date={reservation.date} startTime={reservation.startTime}
+            numGuest={reservation.numGuest} phoneNum={reservation.customer.phoneNum}
+            handleReservationDelete={handleReservationDelete} />
+        </tbody>
+=======
+            <Reservation key={reservation.id} id={reservation.id} firstName={reservation.customer.firstName} lastName={reservation.customer.lastName} date={reservation.date} startTime={reservation.startTime} numGuest={reservation.numGuest} phoneNum={reservation.customer.phoneNum} handleReservationDelete={handleReservationDelete}/>
+>>>>>>> develop
       );
     });
 
