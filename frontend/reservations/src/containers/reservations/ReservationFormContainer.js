@@ -18,7 +18,7 @@ class ReservationFormContainer extends Component {
       window.location = '/reservations'
     })
     } else {
-    window.alert("no space bitches")
+    window.alert("Sorry no space, try another timeslot")
   }
 }
 

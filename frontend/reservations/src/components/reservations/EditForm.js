@@ -67,7 +67,7 @@ class EditForm extends Component {
               <input type = "text" value={this.state.phoneNum} name="phoneNum" placeholder="Phone Number" minLength="10" maxLength="11" required  onChange={e => this.setState({ phoneNum: e.target.value })} />
             </label>
             <label><span>Number of Guests:</span>
-              <input type="number" value={this.state.numGuest} name="numGuest" placeholder="Total Guests" required onChange={e => this.setState({ numGuest: e.target.value })}/>
+              <input type="number" value={this.state.numGuest} name="numGuest" placeholder="Total Guests" max="15" required onChange={e => this.setState({ numGuest: e.target.value })}/>
             </label>
           </fieldset>
         <input type="submit" value="Save" id="save" />
