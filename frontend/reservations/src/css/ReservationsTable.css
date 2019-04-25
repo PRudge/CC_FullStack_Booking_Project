@@ -15,7 +15,7 @@ header {
   padding:30px;
   width:80%;
   font-size:1.5em;
-  text-align: left;
+  text-align: center;
 }
 
 .tbl-layout{
@@ -45,6 +45,7 @@ header {
 }
 
 .tbl-layout thead td {
+  text-align:center;
   display:block;
   width:100%;
 }
@@ -52,7 +53,7 @@ header {
 .tbl-layout th{
   padding: 16px;
   width: 10vw;
-  text-align: left;
+  text-align: center;
   font-weight: 600;
   font-size: 14px;
   color: #fff;
@@ -64,7 +65,7 @@ header {
   padding: 16px;
   border: 1px solid #ddd;
   width: 10vw;
-  text-align: left;
+  text-align: center;
   vertical-align:middle;
   font-weight:600;
   font-size: 14px;
@@ -73,15 +74,15 @@ header {
   border-top: solid 1px #ddd;
 }
 
-.tbl-layout tr:nth-child(even)  {
+.tbl-layout tbody tr:nth-child(even)  {
   background-color: #f0f0f0;
 }
 
-.tbl-layout tr:nth-child(odd)  {
-  /* background-color: lightgray; */
+.tbl-layout tbody tr:nth-child(odd)  {
+  background-color: lightgray;
 }
 
-.tbl-layout tr:hover{
+.tbl-layout tbody tr:hover{
   background-color: #bee2fa;
   color:white;
   font-size:bold;
