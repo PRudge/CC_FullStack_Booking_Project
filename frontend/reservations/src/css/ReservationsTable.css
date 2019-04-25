@@ -1,5 +1,6 @@
 body {
   font-family: 'Oswald', sans-serif;
+  text-align: center;
 }
 
 header {
@@ -51,8 +52,8 @@ header {
 
 .tbl-layout th{
   padding: 14px;
-  width: 7vw;
-  text-align: left;
+  width: 10vw;
+  text-align: center;
   font-weight: 600;
   font-size: 16px;
   color: #fff;
@@ -63,9 +64,8 @@ header {
 .tbl-layout td{
   padding: 14px;
   border: 1px solid #ddd;
-  width: 7vw;
-  text-align: middle;
-
+  width: 10vw;
+  text-align: center;
   font-weight:600;
   font-size: 16px;
   color: #000;
@@ -81,7 +81,7 @@ header {
   /* background-color: lightgray; */
 }
 
-.tbl-layout tr:hover{
+.tbl-layout tbody tr:hover{
   background-color: #bee2fa;
   color:white;
   font-size:bold;
@@ -253,15 +253,13 @@ legend {
 }
 
 button {
-  width: 80px;
+  width: 90px;
   margin-bottom: 0.2em;
   font-size: 0.9em;
   background: #127abe;
-  padding: .25em 1em;
   color: #e7fff7;
   border-radius: 0.25em;
   border-radius: 0.25em;
-  font-weight: 400;
 }
 
 button:hover {
