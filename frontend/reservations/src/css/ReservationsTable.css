@@ -264,7 +264,6 @@ button {
 
 button:hover {
   background: #e7fff7;
-  padding: .25em 1em;
   color: #45a2e8;
   border-radius: 0.25em;
   font-weight: 400;
