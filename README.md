@@ -54,4 +54,4 @@ npm start
 The application is running on port 3000 - http://localhost:3000
 
 ### Screenshots of BookingPal
-![Image of app](bookingpal_screen_shot_1.png)
+![Image of app](bookingpal_screen_shot.png)
