@@ -1,4 +1,4 @@
-#BookingPal
+# BookingPal
 
 BookingPal is a group project completed with a 1 week deadline. Built using Spring, React, PostgreSQL, HTML5, CSS3.
 
